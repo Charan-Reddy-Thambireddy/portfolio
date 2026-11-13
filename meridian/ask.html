@@ -19,17 +19,28 @@
     <div class="mi-demo-banner"><p class="mi-container"><strong>Portfolio demo with fictional data.</strong> Meridian is not a real product. <a href="../index.html">Back to Charan Reddy's portfolio</a></p></div>
     <div class="mi-header">
       <div class="mi-container mi-header__inner">
-        <a class="mi-brand" href="index.html"><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" fill="#ffbf47"/><path d="M6 23 L12 13 L17 19 L26 8" fill="none" stroke="#1b2a4a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Meridian <small>Market intelligence</small></span></a>
+        <a class="mi-brand" href="index.html"><svg width="34" height="34" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><defs><linearGradient id="mi-logo" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbbf24"/><stop offset="1" stop-color="#f472b6"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#mi-logo)"/><path d="M6 23 L12 13 L17 19 L26 8" fill="none" stroke="#1e1b4b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Meridian <small>Market intelligence</small></span></a>
+        <form class="mi-header__search" action="search.html" method="get" role="search">
+          <label for="header-q" class="mi-sr-only">Search Meridian</label>
+          <input type="search" id="header-q" name="q" placeholder="Search reports, statistics, companies" autocomplete="off">
+          <button type="submit"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="m13 13 4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span class="mi-sr-only">Search</span></button>
+        </form>
         <button class="mi-menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-menu-toggle hidden>Menu</button>
-        <nav id="primary-nav" class="mi-nav" aria-label="Main"><ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="explore.html">Explore categories</a></li>
-<li><a href="search.html">Search</a></li>
-<li><a href="ask.html" aria-current="page">Ask Meridian</a></li>
-<li><a href="about.html">About this demo</a></li>
-        </ul></nav>
       </div>
     </div>
+    <nav id="primary-nav" class="mi-menubar" aria-label="Main">
+      <div class="mi-container">
+        <ul class="mi-menubar__list">
+          <li class="mi-menubar__item"><button type="button" class="mi-menubar__trigger" aria-expanded="false" aria-controls="mega-industries">Industries <svg class="mi-chev" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button><div class="mi-mega" id="mega-industries" hidden></div></li>
+          <li class="mi-menubar__item"><button type="button" class="mi-menubar__trigger" aria-expanded="false" aria-controls="mega-countries">Countries <svg class="mi-chev" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button><div class="mi-mega" id="mega-countries" hidden></div></li>
+          <li class="mi-menubar__item"><button type="button" class="mi-menubar__trigger" aria-expanded="false" aria-controls="mega-companies">Companies <svg class="mi-chev" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button><div class="mi-mega" id="mega-companies" hidden></div></li>
+          <li class="mi-menubar__item"><a class="mi-menubar__link" href="explore.html">Explore data</a></li>
+          <li class="mi-menubar__item"><a class="mi-menubar__link" href="search.html">Search</a></li>
+          <li class="mi-menubar__item"><a class="mi-menubar__link" href="ask.html" aria-current="page">Ask Meridian</a></li>
+          <li class="mi-menubar__item"><a class="mi-menubar__link" href="about.html">About</a></li>
+        </ul>
+      </div>
+    </nav>
     <div class="mi-planbar">
       <form class="mi-container" id="plan-form">
         <label for="plan-select">Demo user and subscription</label>
@@ -43,8 +54,7 @@
     <div class="mi-container mi-stack">
 
       <nav class="mi-breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Ask Meridian</li></ol></nav>
-      <h1>Ask Meridian</h1>
-      <p class="mi-lead">Ask about a category, country or company. The answer is built only from Meridian sources you are subscribed to, and every figure links to its source.</p>
+      <div class="mi-page-band" style="--ind:#7e22ce"><h1>Ask Meridian</h1><p>Ask about a category, country or company. The answer is built only from Meridian sources you are subscribed to, and every figure links to its source.</p></div>
       <div class="mi-alert mi-alert--info"><p><strong>How this demo works:</strong> it runs the retrieval half of retrieval-augmented generation (RAG) in your browser: find the question's entities, search the content, drop sources outside your subscription, then write the answer from those sources with a template. In production, the same retrieved sources would be passed to a large language model through the .NET API.</p></div>
       <form id="ask-form" class="mi-card" novalidate>
         <div class="mi-field" id="question-field">

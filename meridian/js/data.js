@@ -13,7 +13,7 @@ export const YEARS = Array.from({ length: LAST_YEAR - FIRST_YEAR + 1 }, (_, i) =
 
 // ---- Taxonomy: industry > category group > category -------------------------------
 export const TAXONOMY = [
-  { id: "drinks", name: "Drinks", groups: [
+  { id: "drinks", name: "Drinks", color: "#0e7490", tint: "#e0f3f7", icon: "drinks", groups: [
     { id: "soft-drinks", name: "Soft Drinks", categories: [
       { id: "carbonates", name: "Carbonates", unit: "million litres", price: 1.1, perCap: 60, growth: -0.01, def: "Sweetened and unsweetened sparkling drinks, including colas and flavoured sodas." },
       { id: "juice", name: "Juice", unit: "million litres", price: 2.2, perCap: 25, growth: 0.0, def: "100% juice, nectars and juice drinks." },
@@ -29,7 +29,7 @@ export const TAXONOMY = [
       { id: "wine", name: "Wine", unit: "million litres", price: 9.0, perCap: 90, growth: -0.01, def: "Still, sparkling and fortified wine." },
     ]},
   ]},
-  { id: "food", name: "Food and Nutrition", groups: [
+  { id: "food", name: "Food and Nutrition", color: "#c2410c", tint: "#fdeee4", icon: "food", groups: [
     { id: "snacks", name: "Snacks", categories: [
       { id: "savoury-snacks", name: "Savoury Snacks", unit: "'000 tonnes", price: 9000, perCap: 70, growth: 0.01, def: "Crisps, extruded snacks, nuts, seeds and popcorn." },
       { id: "confectionery", name: "Confectionery", unit: "'000 tonnes", price: 11000, perCap: 65, growth: 0.005, def: "Chocolate, sugar confectionery and gum." },
@@ -39,13 +39,13 @@ export const TAXONOMY = [
       { id: "yoghurt", name: "Yoghurt", unit: "'000 tonnes", price: 4000, perCap: 25, growth: 0.015, def: "Plain, flavoured and drinking yoghurt." },
     ]},
   ]},
-  { id: "beauty", name: "Beauty and Personal Care", groups: [
+  { id: "beauty", name: "Beauty and Personal Care", color: "#be185d", tint: "#fce7f1", icon: "beauty", groups: [
     { id: "personal-care", name: "Skin and Hair Care", categories: [
       { id: "skin-care", name: "Skin Care", unit: "million units", price: 14, perCap: 55, growth: 0.02, def: "Facial, body and hand care, including sun care." },
       { id: "hair-care", name: "Hair Care", unit: "million units", price: 8, perCap: 35, growth: 0.005, def: "Shampoo, conditioner, styling and colourants." },
     ]},
   ]},
-  { id: "electronics", name: "Consumer Electronics", groups: [
+  { id: "electronics", name: "Consumer Electronics", color: "#6d28d9", tint: "#efe8fd", icon: "electronics", groups: [
     { id: "mobile-devices", name: "Mobile Devices", categories: [
       { id: "smartphones", name: "Smartphones", unit: "'000 units", price: 0.33, perCap: 230, growth: 0.0, def: "Smartphones sold through retail and direct channels." },
       { id: "wearables", name: "Wearables", unit: "'000 units", price: 0.12, perCap: 40, growth: 0.06, def: "Smartwatches, fitness bands and smart rings." },
@@ -64,6 +64,20 @@ export const COUNTRIES = [
   { id: "DE", name: "Germany", region: "Europe", pop: 84, spend: 0.85, growth: 0.02 },
 ];
 export const REGIONS = ["Asia Pacific", "Americas", "Europe"];
+export const REGION_COLORS = { "Asia Pacific": "#0f766e", Americas: "#1d4ed8", Europe: "#7c3aed" };
+
+// Simple line icons for each industry (24x24, stroke = currentColor).
+export const ICONS = {
+  drinks: '<path d="M6 3h12l-1.5 17a1 1 0 0 1-1 1h-7a1 1 0 0 1-1-1z"/><path d="M6.6 9h10.8"/>',
+  food: '<path d="M12 7c-4-3-8 0-8 5s3.5 9 8 9 8-4 8-9-4-8-8-5z"/><path d="M12 7c0-2 1-4 3-4"/>',
+  beauty: '<path d="M12 3c3 4 6 7 6 11a6 6 0 0 1-12 0c0-4 3-7 6-11z"/><path d="M9.5 14.5a2.5 2.5 0 0 0 2.5 2.5"/>',
+  electronics: '<rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M11 18h2"/>',
+  globe: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/>',
+  building: '<path d="M4 21V5l8-2v18M12 21V9l8 2v10M2 21h20M7 8h2M7 12h2M7 16h2M15 14h2M15 17h2"/>',
+};
+export function icon(name, size = 22) {
+  return `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${ICONS[name]}</svg>`;
+}
 
 // Local tastes: multiplies per-capita spend for a category in a country.
 const TASTE = {

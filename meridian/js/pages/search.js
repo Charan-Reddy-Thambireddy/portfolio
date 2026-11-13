@@ -4,6 +4,9 @@
  */
 import { search, highlight } from "../content.js";
 import { escapeHtml } from "../format.js";
+import { TAXONOMY } from "../data.js";
+
+const colorOf = (industryName) => TAXONOMY.find((i) => i.name === industryName)?.color ?? "#64748b";
 import { announce } from "../announcer.js";
 
 const params = new URLSearchParams(location.search);
@@ -49,8 +52,8 @@ function render(announceCount) {
   }
   count.textContent = items.length ? `${items.length} ${items.length === 1 ? "result" : "results"} for "${q}"` : `No results for "${q}". Check the spelling or try a broader term, such as a category or country.`;
   list.innerHTML = items.slice(0, shown).map((h) => `
-    <li class="mi-result">
-      <p style="margin:0 0 0.3rem"><span class="mi-tag">${h.type}</span>${h.entitled ? "" : '<span class="mi-lock" style="margin-left:0">Not in subscription</span>'}${h.date ? ` <span class="mi-meta">${escapeHtml(h.date)}</span>` : ""}</p>
+    <li class="mi-result" style="--ind:${colorOf(h.industry)}">
+      <p style="margin:0 0 0.3rem"><span class="mi-tag mi-tag--${h.type}">${h.type}</span>${h.entitled ? "" : '<span class="mi-lock" style="margin-left:0">Not in subscription</span>'}${h.date ? ` <span class="mi-meta">${escapeHtml(h.date)}</span>` : ""}</p>
       <h3><a href="${h.url}">${highlight(h.title, q)}</a></h3>
       <p>${highlight(h.snippet, q)}</p>
       ${h.country || h.industry ? `<p class="mi-meta">${[h.industry, h.country].filter(Boolean).map(escapeHtml).join(" · ")}</p>` : ""}

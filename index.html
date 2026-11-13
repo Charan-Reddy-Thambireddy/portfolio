@@ -946,7 +946,7 @@ public sealed class AuthorizationsController(ICaseService cases) : ControllerBas
       <div class="section-head">
         <p class="kicker">Featured project 2</p>
         <h2 id="meridian-heading">Meridian: a subscription market-intelligence platform</h2>
-        <p>A sample built on the kind of platform I worked on at Euromonitor International (2021–2025): a research taxonomy, market sizes with forecasts to 2030, analyst reports, full-text search, a source-cited assistant, and access control by subscription. It is the data-heavy counterpart to CareBridge's forms and workflows.</p>
+        <p>A sample built on the kind of platform I worked on at Euromonitor International (2021–2025): a research taxonomy, market sizes with forecasts to 2030, analyst reports, full-text search, a source-cited assistant, and access control by subscription. It has a top menu with Industries, Countries and Companies dropdowns, and is the data-heavy counterpart to CareBridge's forms and workflows.</p>
       </div>
       <p class="project-note">Meridian is an independent sample. It contains no Euromonitor code, data or design, and every company, figure and report in it is fictional.</p>
       <div class="actions">
@@ -959,11 +959,11 @@ public sealed class AuthorizationsController(ICaseService cases) : ControllerBas
         <li class="task">
           <h3>Compare markets and see access control</h3>
           <ul>
-            <li>Select <strong>Soft Drinks</strong>, then India, China and Germany.</li>
+            <li>From the <strong>Industries</strong> menu choose Soft Drinks, or select it in Explore data; add India, China and Germany.</li>
             <li>India and China chart side by side with forecasts; Germany is withheld because Asha's plan covers Drinks in Asia Pacific only.</li>
             <li>Export the visible data as CSV.</li>
           </ul>
-          <a class="go" href="meridian/explore.html">Open Explore categories</a>
+          <a class="go" href="meridian/explore.html">Open Explore data</a>
         </li>
         <li class="task">
           <h3>Switch subscription</h3>
@@ -1008,10 +1008,12 @@ public sealed class AuthorizationsController(ICaseService cases) : ControllerBas
       </div>
 
       <div class="gallery">
-        <figure class="shot"><img src="images/meridian-explore.png" alt="Meridian Explore categories: soft drinks selected for India, China and Germany; a notice says four Germany selections are not in the subscription; KPI cards, a line chart with a shaded forecast period from 2026, and a data table." loading="lazy" width="1280" height="1100"><figcaption><b>Explore and compare</b>Category tree, KPIs, a forecast chart with marker shapes, and an access notice for withheld markets.</figcaption></figure>
-        <figure class="shot"><img src="images/meridian-ask.png" alt="Ask Meridian answer comparing bottled water in India and Japan, with bracketed citation numbers and a numbered list of sources." loading="lazy" width="1280" height="900"><figcaption><b>Source-cited answers</b>Every figure links to the dataset or report it came from.</figcaption></figure>
-        <figure class="shot"><img src="images/meridian-search.png" alt="Search results for cola India, with filters for content type, industry and country, highlighted matches and Not in subscription badges." loading="lazy" width="1280" height="900"><figcaption><b>Search with filters</b>Synonyms (cola to carbonates), facet counts and locked teasers.</figcaption></figure>
-        <figure class="shot"><img src="images/meridian-ask-restricted.png" alt="Ask Meridian explaining that research on beer in Germany exists but is outside the current subscription, with related sources the user can open." loading="lazy" width="1280" height="900"><figcaption><b>Entitlements before generation</b>Withheld sources never reach the answer.</figcaption></figure>
+        <figure class="shot"><img src="images/meridian-home.png" alt="Meridian home page: gradient hero with search and coverage figures, then colour-coded industry tiles for Drinks, Food and Nutrition, Beauty and Personal Care and Consumer Electronics." loading="lazy" width="1280" height="900"><figcaption><b>Home and industry tiles</b>Each industry has its own colour and icon, used across the app.</figcaption></figure>
+        <figure class="shot"><img src="images/meridian-menu.png" alt="The Industries menu open: four coloured columns listing every category group and category, with lock icons on industries outside the subscription." loading="lazy" width="1280" height="900"><figcaption><b>Industries, Countries and Companies menus</b>Dropdown panels list every category, country and company; locks mark content outside the plan.</figcaption></figure>
+        <figure class="shot"><img src="images/meridian-explore.png" alt="Explore data: soft drinks for India, China and Germany; a notice says the Germany selections are not in the subscription; KPI cards, a forecast chart and a data table." loading="lazy" width="1280" height="1100"><figcaption><b>Explore and compare</b>KPIs, a forecast chart with marker shapes, CSV export and an access notice for withheld markets.</figcaption></figure>
+        <figure class="shot"><img src="images/meridian-ask.png" alt="Ask Meridian answer comparing bottled water in India and Japan, with citation numbers and a list of sources." loading="lazy" width="1280" height="900"><figcaption><b>Source-cited answers</b>Every figure links to the dataset or report it came from.</figcaption></figure>
+        <figure class="shot"><img src="images/meridian-search.png" alt="Search results for cola India with filters for content type, industry and country, colour-coded result types and Not in subscription badges." loading="lazy" width="1280" height="900"><figcaption><b>Search with filters</b>Synonyms (cola to carbonates), facet counts and locked teasers.</figcaption></figure>
+        <figure class="shot"><img src="images/meridian-ask-restricted.png" alt="Ask Meridian explaining that research on beer in Germany is outside the current subscription, with related sources the user can open." loading="lazy" width="1280" height="900"><figcaption><b>Entitlements before generation</b>Withheld sources never reach the answer.</figcaption></figure>
       </div>
 
       <div class="section-head code-viewer-head" style="margin-top:3rem">

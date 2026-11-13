@@ -15,7 +15,7 @@ if (!r) {
   root.innerHTML = `${crumbs("Report not found")}<h1>Report not found</h1><p>Check the link, or <a href="search.html">search for a report</a>.</p>`;
 } else {
   document.title = `${r.title} – Meridian Market Intelligence (demo)`;
-  const head = `${crumbs(r.title)}<p class="mi-meta"><span class="mi-tag">Report</span>${escapeHtml(r.group.industry.name)} · Published ${escapeHtml(r.published)}</p><h1>${escapeHtml(r.title)}</h1>`;
+  const head = `${crumbs(r.title)}<div class="mi-page-band" style="--ind:${r.group.industry.color}"><p><span class="mi-tag">Report</span> ${escapeHtml(r.group.industry.name)} · Published ${escapeHtml(r.published)}</p><h1>${escapeHtml(r.title)}</h1><p><a href="country.html?id=${r.country.id}">More on ${escapeHtml(r.country.name)}</a></p></div>`;
 
   if (!canSee(r.group.id, r.country.id)) {
     root.innerHTML = `${head}<p class="mi-lead">${escapeHtml(r.summary.split(".")[0])}.</p>

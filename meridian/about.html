@@ -18,17 +18,28 @@
     <div class="mi-demo-banner"><p class="mi-container"><strong>Portfolio demo with fictional data.</strong> Meridian is not a real product. <a href="../index.html">Back to Charan Reddy's portfolio</a></p></div>
     <div class="mi-header">
       <div class="mi-container mi-header__inner">
-        <a class="mi-brand" href="index.html"><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" fill="#ffbf47"/><path d="M6 23 L12 13 L17 19 L26 8" fill="none" stroke="#1b2a4a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Meridian <small>Market intelligence</small></span></a>
+        <a class="mi-brand" href="index.html"><svg width="34" height="34" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><defs><linearGradient id="mi-logo" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbbf24"/><stop offset="1" stop-color="#f472b6"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#mi-logo)"/><path d="M6 23 L12 13 L17 19 L26 8" fill="none" stroke="#1e1b4b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Meridian <small>Market intelligence</small></span></a>
+        <form class="mi-header__search" action="search.html" method="get" role="search">
+          <label for="header-q" class="mi-sr-only">Search Meridian</label>
+          <input type="search" id="header-q" name="q" placeholder="Search reports, statistics, companies" autocomplete="off">
+          <button type="submit"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="m13 13 4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span class="mi-sr-only">Search</span></button>
+        </form>
         <button class="mi-menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-menu-toggle hidden>Menu</button>
-        <nav id="primary-nav" class="mi-nav" aria-label="Main"><ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="explore.html">Explore categories</a></li>
-<li><a href="search.html">Search</a></li>
-<li><a href="ask.html">Ask Meridian</a></li>
-<li><a href="about.html" aria-current="page">About this demo</a></li>
-        </ul></nav>
       </div>
     </div>
+    <nav id="primary-nav" class="mi-menubar" aria-label="Main">
+      <div class="mi-container">
+        <ul class="mi-menubar__list">
+          <li class="mi-menubar__item"><button type="button" class="mi-menubar__trigger" aria-expanded="false" aria-controls="mega-industries">Industries <svg class="mi-chev" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button><div class="mi-mega" id="mega-industries" hidden></div></li>
+          <li class="mi-menubar__item"><button type="button" class="mi-menubar__trigger" aria-expanded="false" aria-controls="mega-countries">Countries <svg class="mi-chev" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button><div class="mi-mega" id="mega-countries" hidden></div></li>
+          <li class="mi-menubar__item"><button type="button" class="mi-menubar__trigger" aria-expanded="false" aria-controls="mega-companies">Companies <svg class="mi-chev" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button><div class="mi-mega" id="mega-companies" hidden></div></li>
+          <li class="mi-menubar__item"><a class="mi-menubar__link" href="explore.html">Explore data</a></li>
+          <li class="mi-menubar__item"><a class="mi-menubar__link" href="search.html">Search</a></li>
+          <li class="mi-menubar__item"><a class="mi-menubar__link" href="ask.html">Ask Meridian</a></li>
+          <li class="mi-menubar__item"><a class="mi-menubar__link" href="about.html" aria-current="page">About</a></li>
+        </ul>
+      </div>
+    </nav>
     <div class="mi-planbar">
       <form class="mi-container" id="plan-form">
         <label for="plan-select">Demo user and subscription</label>
@@ -42,12 +53,11 @@
     <div class="mi-container mi-stack">
 
       <nav class="mi-breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">About this demo</li></ol></nav>
-      <h1>About this demo</h1>
-      <p class="mi-lead">Meridian is a portfolio sample of a subscription market-intelligence platform: a research taxonomy, market sizes and forecasts, analyst reports, search, a source-cited assistant and per-subscription access control.</p>
+      <div class="mi-page-band" style="--ind:#334155"><h1>About this demo</h1><p>Meridian is a portfolio sample of a subscription market-intelligence platform: a research taxonomy, market sizes and forecasts, analyst reports, search, a source-cited assistant and per-subscription access control.</p></div>
       <section class="mi-card" aria-labelledby="try-heading">
         <h2 id="try-heading">Things to try</h2>
         <ol>
-          <li>In <a href="explore.html">Explore categories</a>, choose Soft Drinks, then India and China, and select <strong>View data</strong>. Compare the chart and table, then export the data as CSV.</li>
+          <li>In <a href="explore.html">Explore data</a>, choose Soft Drinks, then India and China, and select <strong>View data</strong>. Compare the chart and table, then export the data as CSV.</li>
           <li>Add Germany. You will see an access notice, because Asha's subscription covers Drinks in Asia Pacific only. Switch to Mei Lin (Global) in the bar at the top, and Germany appears.</li>
           <li>Search for <a href="search.html?q=cola%20india">cola India</a>: "cola" maps to the Carbonates category through a synonym list, and the filters narrow results by type, industry and country.</li>
           <li>In <a href="ask.html">Ask Meridian</a>, ask "Which company leads energy drinks in Indonesia?" and follow the citations to the sources.</li>

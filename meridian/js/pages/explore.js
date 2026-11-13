@@ -3,7 +3,7 @@
  * The selection is kept in the URL (?cat=...&geo=...&metric=...) so a view can be shared.
  */
 import { TAXONOMY, COUNTRIES, REGIONS, METRICS, YEARS, LAST_ACTUAL, LAST_YEAR,
-  category, country, metric, series, cagr, companyShares } from "../data.js";
+  category, country, metric, series, cagr, companyShares, icon } from "../data.js";
 import { canSee, canSeeIndustry, canSeeCountry } from "../entitlements.js";
 import { lineChart } from "../chart.js";
 import { escapeHtml, num, pct } from "../format.js";
@@ -22,7 +22,7 @@ tree.innerHTML = TAXONOMY.map((ind) => `
   <li>
     <div class="mi-tree__row">
       <button type="button" class="mi-tree__toggle" aria-expanded="false" aria-controls="ind-${ind.id}" id="toggle-${ind.id}">${CHEVRON}<span class="mi-sr-only">${escapeHtml(ind.name)}</span></button>
-      <span id="ind-label-${ind.id}"><strong>${escapeHtml(ind.name)}</strong>${canSeeIndustry(ind.id) ? "" : LOCK}</span>
+      <span id="ind-label-${ind.id}" class="mi-tree__industry" style="--ind:${ind.color}"><span class="mi-ind-icon">${icon(ind.icon, 16)}</span><strong>${escapeHtml(ind.name)}</strong>${canSeeIndustry(ind.id) ? "" : LOCK}</span>
     </div>
     <ul id="ind-${ind.id}" hidden aria-labelledby="ind-label-${ind.id}">
       ${ind.groups.map((g) => `

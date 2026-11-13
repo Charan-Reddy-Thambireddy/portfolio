@@ -162,7 +162,7 @@ function run(question) {
     <h2 id="answer-heading">Answer</h2>
     <div class="mi-answer">${a.paras.map((p) => `<p>${p.text}</p>`).join("")}</div>
     <h3 style="margin-top:1.25rem">Sources</h3>
-    ${a.kept.some((s) => s.n) ? `<ol class="mi-results">${a.kept.filter((s) => s.n).sort((x, y) => x.n - y.n).map((s) => `<li class="mi-result" id="src-${s.n}" tabindex="-1"><span class="mi-tag">[${s.n}] ${s.type}</span> <a href="${s.url}">${escapeHtml(s.title)}</a></li>`).join("")}</ol>` : `<p>No sources were cited.</p>`}
+    ${a.kept.some((s) => s.n) ? `<ol class="mi-results">${a.kept.filter((s) => s.n).sort((x, y) => x.n - y.n).map((s) => `<li class="mi-result" id="src-${s.n}" tabindex="-1"><span class="mi-tag mi-tag--${s.type}">[${s.n}] ${s.type}</span> <a href="${s.url}">${escapeHtml(s.title)}</a></li>`).join("")}</ol>` : `<p>No sources were cited.</p>`}
     <h3 style="margin-top:1.5rem">How this answer was built</h3>
     <ol class="mi-pipeline">
       <li class="mi-step"><h3>Understand the question</h3>
