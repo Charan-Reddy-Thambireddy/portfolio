@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Select categories, countries and a metric to view market data.">
+  <title>Explore categories – Meridian Market Intelligence (demo)</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/app.css">
+  <script type="module" src="js/layout.js"></script>
+  <script type="module" src="js/pages/explore.js"></script>
+</head>
+<body>
+  <a class="mi-skip" href="#main">Skip to main content</a>
+  <header>
+    <div class="mi-demo-banner"><p class="mi-container"><strong>Portfolio demo with fictional data.</strong> Meridian is not a real product. <a href="../index.html">Back to Charan Reddy's portfolio</a></p></div>
+    <div class="mi-header">
+      <div class="mi-container mi-header__inner">
+        <a class="mi-brand" href="index.html"><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" fill="#ffbf47"/><path d="M6 23 L12 13 L17 19 L26 8" fill="none" stroke="#1b2a4a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Meridian <small>Market intelligence</small></span></a>
+        <button class="mi-menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-menu-toggle hidden>Menu</button>
+        <nav id="primary-nav" class="mi-nav" aria-label="Main"><ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="explore.html" aria-current="page">Explore categories</a></li>
+<li><a href="search.html">Search</a></li>
+<li><a href="ask.html">Ask Meridian</a></li>
+<li><a href="about.html">About this demo</a></li>
+        </ul></nav>
+      </div>
+    </div>
+    <div class="mi-planbar">
+      <form class="mi-container" id="plan-form">
+        <label for="plan-select">Demo user and subscription</label>
+        <select id="plan-select" name="plan"><option>Loading…</option></select>
+        <button type="submit">Switch user</button>
+        <span id="plan-coverage"></span>
+      </form>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <div class="mi-container mi-stack">
+
+      <nav class="mi-breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Explore categories</li></ol></nav>
+      <h1>Explore categories</h1>
+      <p class="mi-lead">Choose one or more categories and countries, then a metric. Historical data runs to 2025; 2026 to 2030 are forecasts.</p>
+      <div id="error-summary" class="mi-error-summary" tabindex="-1" role="alert" hidden><h2>There is a problem</h2><ul></ul></div>
+      <div class="mi-two-col">
+        <form id="explore-form" class="mi-card" novalidate>
+          <fieldset id="categories-group">
+            <legend>Categories</legend>
+            <p class="mi-hint" id="cat-hint">Expand an industry to choose categories. Selecting a group selects all its categories.</p>
+            <p class="mi-error" id="categories-error" hidden></p>
+            <ul class="mi-tree" id="tree" aria-describedby="cat-hint"></ul>
+          </fieldset>
+          <fieldset id="countries-group">
+            <legend>Countries</legend>
+            <p class="mi-error" id="countries-error" hidden></p>
+            <div id="countries"></div>
+          </fieldset>
+          <div class="mi-field">
+            <label for="metric">Metric</label>
+            <select id="metric" name="metric"></select>
+          </div>
+          <div class="mi-actions"><button class="mi-button" type="submit">View data</button><button class="mi-button mi-button--secondary" type="reset" id="clear">Clear</button></div>
+        </form>
+        <section id="results" class="mi-stack" aria-labelledby="results-heading" tabindex="-1">
+          <h2 id="results-heading">Results</h2>
+          <p class="mi-hint">Make a selection and choose <strong>View data</strong>.</p>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="mi-footer"><div class="mi-container">
+    <p>Meridian is an independent portfolio demonstration by Charan Reddy. All companies, figures, forecasts and reports are fictional and generated in the browser; country names are real. It is not affiliated with any market research company.</p>
+  </div></footer>
+  <div id="mi-live-polite" class="mi-sr-only" aria-live="polite" aria-atomic="true"></div>
+  <div id="mi-live-assertive" class="mi-sr-only" aria-live="assertive" aria-atomic="true"></div>
+</body>
+</html>

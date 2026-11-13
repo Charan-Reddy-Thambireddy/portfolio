@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Company shares by category and country.">
+  <title>Company profile – Meridian Market Intelligence (demo)</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/app.css">
+  <script type="module" src="js/layout.js"></script>
+  <script type="module" src="js/pages/company.js"></script>
+</head>
+<body>
+  <a class="mi-skip" href="#main">Skip to main content</a>
+  <header>
+    <div class="mi-demo-banner"><p class="mi-container"><strong>Portfolio demo with fictional data.</strong> Meridian is not a real product. <a href="../index.html">Back to Charan Reddy's portfolio</a></p></div>
+    <div class="mi-header">
+      <div class="mi-container mi-header__inner">
+        <a class="mi-brand" href="index.html"><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" fill="#ffbf47"/><path d="M6 23 L12 13 L17 19 L26 8" fill="none" stroke="#1b2a4a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Meridian <small>Market intelligence</small></span></a>
+        <button class="mi-menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-menu-toggle hidden>Menu</button>
+        <nav id="primary-nav" class="mi-nav" aria-label="Main"><ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="explore.html">Explore categories</a></li>
+<li><a href="search.html" aria-current="page">Search</a></li>
+<li><a href="ask.html">Ask Meridian</a></li>
+<li><a href="about.html">About this demo</a></li>
+        </ul></nav>
+      </div>
+    </div>
+    <div class="mi-planbar">
+      <form class="mi-container" id="plan-form">
+        <label for="plan-select">Demo user and subscription</label>
+        <select id="plan-select" name="plan"><option>Loading…</option></select>
+        <button type="submit">Switch user</button>
+        <span id="plan-coverage"></span>
+      </form>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <div class="mi-container mi-stack">
+
+      <div id="company-root"><p>Loading company…</p></div>
+    </div>
+  </main>
+  <footer class="mi-footer"><div class="mi-container">
+    <p>Meridian is an independent portfolio demonstration by Charan Reddy. All companies, figures, forecasts and reports are fictional and generated in the browser; country names are real. It is not affiliated with any market research company.</p>
+  </div></footer>
+  <div id="mi-live-polite" class="mi-sr-only" aria-live="polite" aria-atomic="true"></div>
+  <div id="mi-live-assertive" class="mi-sr-only" aria-live="assertive" aria-atomic="true"></div>
+</body>
+</html>
