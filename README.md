@@ -2,7 +2,7 @@
 
 Live site: https://charan-reddy-thambireddy.github.io/portfolio/
 
-- `index.html`: portfolio (qualifications, CareBridge project, accessibility evidence, code samples, role fit, skills, experience, resume)
+- `index.html`: portfolio (skills at a glance, CareBridge and Meridian projects, accessibility evidence, code samples, how I work, skills, experience, resume)
 - `demo/`: in-browser demo of CareBridge, a fictional long-term care and Medicare support portal
 - `meridian/`: in-browser demo of Meridian, a fictional subscription market-intelligence platform (explore, forecasts, search, source-cited Ask, entitlements)
 - `samples/`: ASP.NET Core MVC, Razor, jQuery, xUnit and Web API documentation samples

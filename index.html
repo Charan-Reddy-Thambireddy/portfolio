@@ -151,7 +151,7 @@ thead th { border-bottom: 2px solid var(--ink); white-space: nowrap; }
 .code-scroll { overflow: auto; max-height: 30rem; }
 .code-scroll pre { margin: 0; padding: 1rem; font-family: var(--font-mono); font-size: 0.85rem; line-height: 1.55; tab-size: 4; }
 
-/* Skills mapped to the role */
+/* Skill cards */
 .weights { display: grid; gap: 1rem; }
 .weight { display: grid; gap: 0.5rem 1.5rem; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 1.1rem 1.25rem; }
 @media (min-width: 48rem) { .weight { grid-template-columns: 14rem minmax(0, 1fr); } }
@@ -174,11 +174,11 @@ footer { padding-block: 2.5rem 3rem; color: var(--muted); font-size: var(--step-
 footer .wrap { display: grid; gap: 0.6rem; }
 
 
-/* Added: requirements matrix, downloads, skills */
+/* Skills table, downloads, skill cards */
 .req-table td, .req-table th { vertical-align: top; }
 .req-table td:last-child { min-width: 16rem; }
 .req-group th { background: var(--bg); font-family: var(--font-mono); font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--accent); }
-.met { display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.1rem 0.55rem; border-radius: 99px; border: 1px solid var(--ok); color: var(--ok); font-weight: 600; font-size: 0.85rem; white-space: nowrap; }
+.met { display: inline-flex; white-space: nowrap; align-items: center; gap: 0.35rem; padding: 0.1rem 0.55rem; border-radius: 99px; border: 1px solid var(--ok); color: var(--ok); font-weight: 600; font-size: 0.85rem; white-space: nowrap; }
 .met svg { width: 0.9rem; height: 0.9rem; }
 .note { color: var(--muted); font-size: var(--step--1); margin-top: 1rem; max-width: 52rem; }
 .duty-tag { font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent); letter-spacing: 0.05em; text-transform: uppercase; }
@@ -220,12 +220,12 @@ footer .wrap { display: grid; gap: 0.6rem; }
     <a class="brand" href="#top">Charan Reddy</a>
     <nav aria-label="Portfolio sections">
       <ul>
-        <li><a href="#requirements">Requirements</a></li>
+        <li><a href="#at-a-glance">At a glance</a></li>
         <li><a href="#project">CareBridge</a></li>
         <li><a href="#meridian">Meridian</a></li>
         <li><a href="#accessibility">Accessibility</a></li>
         <li><a href="#code">Code</a></li>
-        <li><a href="#fit">Role fit</a></li>
+        <li><a href="#fit">How I work</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#resume">Resume</a></li>
@@ -272,29 +272,28 @@ footer .wrap { display: grid; gap: 0.6rem; }
   </div>
 
 
-  <section id="requirements" aria-labelledby="req-heading">
+  <section id="at-a-glance" aria-labelledby="glance-heading">
     <div class="wrap">
       <div class="section-head">
-        <p class="kicker">Qualifications</p>
-        <h2 id="req-heading">Mandatory and desirable qualifications, line by line</h2>
-        <p>For the .NET Full Stack Developer contract in Albany, NY. Months are counted from May 2018 to November 2026 (about 102 months), using the dates on my resume.</p>
+        <p class="kicker">Experience at a glance</p>
+        <h2 id="glance-heading">Core skills and how long I have used them</h2>
+        <p>Counted from May 2018 to November 2026, about 102 months, using the dates on my resume.</p>
       </div>
-      <div class="table-scroll" role="region" aria-labelledby="req-caption" tabindex="0">
+      <div class="table-scroll" role="region" aria-labelledby="glance-caption" tabindex="0">
         <table class="req-table">
-          <caption id="req-caption">Requirement, what is asked, and where my experience shows it</caption>
-          <thead><tr><th scope="col">Requirement</th><th scope="col">Asked</th><th scope="col">Status</th><th scope="col">My experience</th></tr></thead>
+          <caption id="glance-caption">Skill, experience, and where it shows</caption>
+          <thead><tr><th scope="col">Skill</th><th scope="col">Experience</th><th scope="col">Where it shows</th></tr></thead>
           <tbody>
-            <tr class="req-group"><th scope="rowgroup" colspan="4">Mandatory</th></tr>
-            <tr><th scope="row">System integration engineering (Level I)</th><td>3 to 7 years</td><td><span class="met"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m4 12.5 5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Meets</span></td><td>Integration work in every role: Kafka and RabbitMQ events between services, APIs across Karnataka state departments, NIC data-center beneficiary data, financial and reporting system integration at DSS, a Stripe payment gateway, and SSIS data synchronization.</td></tr>
-            <tr><th scope="row">Full stack developer, C# primary</th><td>72 months</td><td><span class="met"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m4 12.5 5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Meets</span></td><td><b>About 102 months</b>, C# first in all four roles: Blackwater Tech, Karnataka Agricultural Dept, Euromonitor, NYC DSS.</td></tr>
-            <tr><th scope="row">ASP.NET Core MVC (not .NET Framework MVC)</th><td>48 months</td><td><span class="met"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m4 12.5 5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Meets</span></td><td>ASP.NET Core in all four roles since 2018: MVC web apps at Blackwater Tech and the Karnataka department, then .NET 6/8 services and web apps at Euromonitor and DSS. See the <a href="#mvc-heading">MVC controller and Razor samples</a>.</td></tr>
-            <tr><th scope="row">Front end: jQuery, JavaScript, HTML5, Bootstrap, CSS/SCSS/LESS</th><td>48 months</td><td><span class="met"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m4 12.5 5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Meets</span></td><td>JavaScript, TypeScript, HTML5, CSS3, SCSS and Bootstrap since 2018, plus Angular Material, Angular and React. jQuery unobtrusive validation and AJAX are shown in the <a href="#mvc-heading">jQuery sample</a>; the CareBridge design system is written in SCSS.</td></tr>
-            <tr class="req-group"><th scope="rowgroup" colspan="4">Desirable</th></tr>
-            <tr><th scope="row">SQL queries and stored procedures</th><td>60 months</td><td><span class="met"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m4 12.5 5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Meets</span></td><td><b>About 102 months</b>: schema design, stored procedures, views, indexing and query tuning in every role, plus SSIS and SQL Server Agent jobs.</td></tr>
-            <tr><th scope="row">Entity Framework</th><td>36 months</td><td><span class="met"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m4 12.5 5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Meets</span></td><td>Entity Framework at Blackwater Tech and Karnataka, ORM tuning at Euromonitor, EF Core at DSS. LINQ, Dapper and ADO.NET where they fit better.</td></tr>
-            <tr><th scope="row">.NET Web API</th><td>36 months</td><td><span class="met"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m4 12.5 5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Meets</span></td><td><b>About 102 months</b>: RESTful APIs in every role, API contracts and versioning, OAuth 2.0 / OIDC with Azure AD. See the <a href="#mvc-heading">documented API sample</a>.</td></tr>
-            <tr><th scope="row">Writing and running unit tests</th><td>36 months</td><td><span class="met"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m4 12.5 5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Meets</span></td><td>xUnit and NUnit for .NET, Karma for front ends, Swagger and Postman for APIs, SonarQube/SonarCloud quality gates. See the <a href="#mvc-heading">xUnit sample</a>.</td></tr>
-            <tr><th scope="row">Git for code management</th><td>24 months</td><td><span class="met"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m4 12.5 5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Meets</span></td><td>Git with Azure DevOps and GitHub (GitHub Actions), and TFS earlier. Branching, pull requests and code reviews are part of every sprint.</td></tr>
+            <tr class="req-group"><th scope="rowgroup" colspan="3">Core stack</th></tr>
+            <tr><th scope="row">Full stack development, C# first</th><td><span class="met">8+ years</span></td><td>About 102 months, C# first in all four roles: Blackwater Tech, Karnataka Agricultural Dept, Euromonitor International and NYC DSS.</td></tr>
+            <tr><th scope="row">ASP.NET Core MVC and Web API</th><td><span class="met">8+ years</span></td><td>ASP.NET Core in all four roles since 2018: MVC web apps at Blackwater Tech and the Karnataka department, then .NET 6/8 services and web apps at Euromonitor and DSS. See the <a href="#mvc-heading">MVC, Razor and Web API samples</a>.</td></tr>
+            <tr><th scope="row">Front end: JavaScript, jQuery, HTML5, Bootstrap, CSS/SCSS</th><td><span class="met">8+ years</span></td><td>JavaScript, TypeScript, HTML5, CSS3, SCSS and Bootstrap since 2018, plus Angular, Angular Material and React. jQuery validation and AJAX are shown in the <a href="#mvc-heading">jQuery sample</a>; the CareBridge design system is written in SCSS.</td></tr>
+            <tr><th scope="row">Systems integration</th><td><span class="met">Every role</span></td><td>Kafka and RabbitMQ events between services, APIs across Karnataka state departments, NIC data-center beneficiary data, financial and reporting integrations at DSS, a Stripe payment gateway, and SSIS data synchronization.</td></tr>
+            <tr class="req-group"><th scope="rowgroup" colspan="3">Data, testing and tooling</th></tr>
+            <tr><th scope="row">SQL queries and stored procedures</th><td><span class="met">8+ years</span></td><td>Schema design, stored procedures, views, indexing and query tuning in every role, plus SSIS and SQL Server Agent jobs.</td></tr>
+            <tr><th scope="row">Entity Framework / EF Core</th><td><span class="met">4+ years</span></td><td>Entity Framework at Blackwater Tech and Karnataka, ORM tuning at Euromonitor, EF Core at DSS. LINQ, Dapper and ADO.NET where they fit better.</td></tr>
+            <tr><th scope="row">Unit testing</th><td><span class="met">Every role</span></td><td>xUnit and NUnit for .NET, Karma for front ends, Swagger and Postman for APIs, SonarQube/SonarCloud quality gates. See the <a href="#mvc-heading">xUnit samples</a>.</td></tr>
+            <tr><th scope="row">Git and CI/CD</th><td><span class="met">Every role</span></td><td>Git with Azure DevOps and GitHub (GitHub Actions), and TFS earlier. Branching, pull requests, code reviews and automated release pipelines in every role.</td></tr>
           </tbody>
         </table>
       </div>
@@ -306,7 +305,7 @@ footer .wrap { display: grid; gap: 0.6rem; }
       <div class="section-head">
         <p class="kicker">Featured project</p>
         <h2 id="project-heading">CareBridge: long-term care and Medicare support portal</h2>
-        <p>An independent sample built for this application. The public side is a plain-language eligibility screener for Medicaid long-term care, home and community-based services, and the Medicare Savings Program. The staff side is a caseworker queue and a case page for approving or denying service authorizations. All data is fictional.</p>
+        <p>An independent sample project. The public side is a plain-language eligibility screener for Medicaid long-term care, home and community-based services, and the Medicare Savings Program. The staff side is a caseworker queue and a case page for approving or denying service authorizations. All data is fictional.</p>
       </div>
 
       <h3 id="try-heading">Try it yourself: three tasks, about five minutes</h3>
@@ -611,7 +610,7 @@ END;</code></pre></div>
       </div>
       <div class="section-head code-viewer-head">
         <h3 id="mvc-heading">ASP.NET Core MVC, jQuery, unit tests and API documentation</h3>
-        <p>Full files are in this site's <a href="https://github.com/Charan-Reddy-Thambireddy/portfolio/tree/main/samples">samples folder on GitHub</a>. The same service-authorization decision, carried through the stack the role asks for: an MVC controller and Razor view styled with Bootstrap, jQuery validation and AJAX, xUnit tests, and a Web API endpoint whose XML comments produce the Swagger documentation.</p>
+        <p>Full files are in this site's <a href="https://github.com/Charan-Reddy-Thambireddy/portfolio/tree/main/samples">samples folder on GitHub</a>. The same service-authorization decision, carried through the full stack: an MVC controller and Razor view styled with Bootstrap, jQuery validation and AJAX, xUnit tests, and a Web API endpoint whose XML comments produce the Swagger documentation.</p>
       </div>
       <div class="code-viewer">
         <div class="code-tabs" role="tablist" aria-label="MVC, jQuery and testing samples"><button type="button" role="tab" class="code-tab" id="code-tab-mvc-ctrl" aria-controls="code-panel-mvc-ctrl" aria-selected="true">MVC controller</button><button type="button" role="tab" class="code-tab" id="code-tab-mvc-model" aria-controls="code-panel-mvc-model" aria-selected="false" tabindex="-1">View model</button><button type="button" role="tab" class="code-tab" id="code-tab-mvc-razor" aria-controls="code-panel-mvc-razor" aria-selected="false" tabindex="-1">Razor + Bootstrap</button><button type="button" role="tab" class="code-tab" id="code-tab-mvc-jq" aria-controls="code-panel-mvc-jq" aria-selected="false" tabindex="-1">jQuery</button><button type="button" role="tab" class="code-tab" id="code-tab-mvc-xunit" aria-controls="code-panel-mvc-xunit" aria-selected="false" tabindex="-1">xUnit tests</button><button type="button" role="tab" class="code-tab" id="code-tab-mvc-doc" aria-controls="code-panel-mvc-doc" aria-selected="false" tabindex="-1">API docs</button></div>
@@ -1417,9 +1416,9 @@ public sealed class MarketEntitlementHandlerTests
   <section id="fit" aria-labelledby="fit-heading">
     <div class="wrap">
       <div class="section-head">
-        <p class="kicker">Role fit</p>
-        <h2 id="fit-heading">The role's duties, matched to work I have done</h2>
-        <p>Each group follows the five sections of the position summary, with examples from my resume.</p>
+        <p class="kicker">How I work</p>
+        <h2 id="fit-heading">From requirements to production support</h2>
+        <p>Five areas of the work, with examples from my roles.</p>
       </div>
       <div class="weights">
         <div class="weight">
@@ -1531,7 +1530,7 @@ public sealed class MarketEntitlementHandlerTests
         <div>
           <p class="kicker">Resume</p>
           <h2 id="resume-heading">Download my resume</h2>
-          <p>The same resume I shared with the recruiter, as a Word document or a PDF.</p>
+          <p>My current resume, as a PDF or a Word document.</p>
           <p class="dl-status" id="dl-status" role="status"></p>
         </div>
         <div class="actions">
