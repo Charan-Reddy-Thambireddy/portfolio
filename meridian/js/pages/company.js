@@ -1,7 +1,7 @@
-import { LAST_ACTUAL, ALL_COMPANIES } from "../data.js";
-import { companyProfile } from "../content.js";
-import { canSee } from "../entitlements.js";
-import { escapeHtml, pct, num } from "../format.js";
+import { LAST_ACTUAL, ALL_COMPANIES } from "../data.js?v=7f674494";
+import { companyProfile } from "../content.js?v=7f674494";
+import { canSee } from "../entitlements.js?v=7f674494";
+import { escapeHtml, pct, num } from "../format.js?v=7f674494";
 
 const root = document.getElementById("company-root");
 const name = new URLSearchParams(location.search).get("name") ?? "";

@@ -7,11 +7,11 @@
  * Production replaces step 4's template with an LLM call that receives the same sources.
  */
 import { CATEGORIES, GROUPS, COUNTRIES, ALL_COMPANIES, LAST_ACTUAL, LAST_YEAR, FIRST_YEAR,
-  valueSeries, series, cagr, companyShares, metric } from "../data.js";
-import { search, groupValue, groupCompanies, companyProfile } from "../content.js";
-import { canSee, currentPlan } from "../entitlements.js";
-import { escapeHtml, usdMillion, pct, num } from "../format.js";
-import { announce } from "../announcer.js";
+  valueSeries, series, cagr, companyShares, metric } from "../data.js?v=7f674494";
+import { search, groupValue, groupCompanies, companyProfile } from "../content.js?v=7f674494";
+import { canSee, currentPlan } from "../entitlements.js?v=7f674494";
+import { escapeHtml, usdMillion, pct, num } from "../format.js?v=7f674494";
+import { announce } from "../announcer.js?v=7f674494";
 
 const form = document.getElementById("ask-form");
 const input = document.getElementById("question");

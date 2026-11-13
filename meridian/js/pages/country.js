@@ -1,7 +1,7 @@
-import { COUNTRIES, GROUPS, LAST_ACTUAL, LAST_YEAR, REGION_COLORS, cagr, icon } from "../data.js";
-import { groupValue, groupCompanies } from "../content.js";
-import { canSee, canSeeCountry, currentPlan } from "../entitlements.js";
-import { escapeHtml, usdMillion, pct } from "../format.js";
+import { COUNTRIES, GROUPS, LAST_ACTUAL, LAST_YEAR, REGION_COLORS, cagr, icon } from "../data.js?v=7f674494";
+import { groupValue, groupCompanies } from "../content.js?v=7f674494";
+import { canSee, canSeeCountry, currentPlan } from "../entitlements.js?v=7f674494";
+import { escapeHtml, usdMillion, pct } from "../format.js?v=7f674494";
 
 const root = document.getElementById("country-root");
 const id = new URLSearchParams(location.search).get("id");

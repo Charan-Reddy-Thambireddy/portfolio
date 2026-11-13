@@ -5,9 +5,9 @@
  * The menu uses the disclosure pattern (buttons with aria-expanded that show a panel of
  * ordinary links), which works with screen readers without menu-role key handling.
  */
-import { PLANS, TAXONOMY, COUNTRIES, REGIONS, REGION_COLORS, COMPANIES, GROUPS, icon } from "./data.js";
-import { currentPlan, setPlan, canSeeIndustry, canSeeCountry } from "./entitlements.js";
-import { escapeHtml } from "./format.js";
+import { PLANS, TAXONOMY, COUNTRIES, REGIONS, REGION_COLORS, COMPANIES, GROUPS, icon } from "./data.js?v=7f674494";
+import { currentPlan, setPlan, canSeeIndustry, canSeeCountry } from "./entitlements.js?v=7f674494";
+import { escapeHtml } from "./format.js?v=7f674494";
 
 document.documentElement.classList.add("js");
 const plan = currentPlan();

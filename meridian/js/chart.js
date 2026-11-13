@@ -3,8 +3,8 @@
  * shaded band. Each series also gets a distinct marker shape, so colour is never the
  * only cue (WCAG 1.4.1). The data table next to the chart carries the exact values.
  */
-import { YEARS, LAST_ACTUAL } from "./data.js";
-import { escapeHtml, num } from "./format.js";
+import { YEARS, LAST_ACTUAL } from "./data.js?v=7f674494";
+import { escapeHtml, num } from "./format.js?v=7f674494";
 
 export const PALETTE = ["#2f5fd0", "#c2410c", "#0f766e", "#9333ea", "#b45309", "#be123c"];
 const MARKERS = ["circle", "square", "diamond", "triangle", "circle-open", "square-open"];

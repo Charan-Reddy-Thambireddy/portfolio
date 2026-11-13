@@ -3,7 +3,7 @@
  * what they may see. In the API this check runs server-side on every request; the demo
  * mirrors it in the browser so the access-denied paths can be tried.
  */
-import { PLANS, category, group } from "./data.js";
+import { PLANS, category, group } from "./data.js?v=7f674494";
 
 const KEY = "meridian.plan";
 

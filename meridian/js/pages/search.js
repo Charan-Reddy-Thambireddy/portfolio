@@ -2,12 +2,12 @@
  * Search results with facet filters (type, industry, country) and entitlement badges.
  * Locked results stay visible as teasers; opening one shows the access notice.
  */
-import { search, highlight } from "../content.js";
-import { escapeHtml } from "../format.js";
-import { TAXONOMY } from "../data.js";
+import { search, highlight } from "../content.js?v=7f674494";
+import { escapeHtml } from "../format.js?v=7f674494";
+import { TAXONOMY } from "../data.js?v=7f674494";
 
 const colorOf = (industryName) => TAXONOMY.find((i) => i.name === industryName)?.color ?? "#64748b";
-import { announce } from "../announcer.js";
+import { announce } from "../announcer.js?v=7f674494";
 
 const params = new URLSearchParams(location.search);
 const q = (params.get("q") ?? "").trim();

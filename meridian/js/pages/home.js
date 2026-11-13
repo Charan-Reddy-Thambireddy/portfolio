@@ -1,7 +1,7 @@
-import { TAXONOMY, COUNTRIES, CATEGORIES, YEARS, LAST_ACTUAL, LAST_YEAR, valueSeries, cagr, icon } from "../data.js";
-import { currentPlan, canSee, canSeeIndustry } from "../entitlements.js";
-import { report, REPORT_IDS } from "../content.js";
-import { escapeHtml, usdMillion, pct } from "../format.js";
+import { TAXONOMY, COUNTRIES, CATEGORIES, YEARS, LAST_ACTUAL, LAST_YEAR, valueSeries, cagr, icon } from "../data.js?v=7f674494";
+import { currentPlan, canSee, canSeeIndustry } from "../entitlements.js?v=7f674494";
+import { report, REPORT_IDS } from "../content.js?v=7f674494";
+import { escapeHtml, usdMillion, pct } from "../format.js?v=7f674494";
 
 const plan = currentPlan();
 const geo = plan.countries.join(",");

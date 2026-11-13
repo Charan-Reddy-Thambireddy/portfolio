@@ -1,8 +1,8 @@
-import { LAST_ACTUAL, LAST_YEAR, YEARS, valueSeries, cagr } from "../data.js";
-import { report } from "../content.js";
-import { canSee } from "../entitlements.js";
-import { lineChart } from "../chart.js";
-import { escapeHtml, num, pct, usdMillion } from "../format.js";
+import { LAST_ACTUAL, LAST_YEAR, YEARS, valueSeries, cagr } from "../data.js?v=7f674494";
+import { report } from "../content.js?v=7f674494";
+import { canSee } from "../entitlements.js?v=7f674494";
+import { lineChart } from "../chart.js?v=7f674494";
+import { escapeHtml, num, pct, usdMillion } from "../format.js?v=7f674494";
 
 const root = document.getElementById("report-root");
 const id = new URLSearchParams(location.search).get("id") ?? "";

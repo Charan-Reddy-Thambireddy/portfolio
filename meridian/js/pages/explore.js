@@ -3,11 +3,11 @@
  * The selection is kept in the URL (?cat=...&geo=...&metric=...) so a view can be shared.
  */
 import { TAXONOMY, COUNTRIES, REGIONS, METRICS, YEARS, LAST_ACTUAL, LAST_YEAR,
-  category, country, metric, series, cagr, companyShares, icon } from "../data.js";
-import { canSee, canSeeIndustry, canSeeCountry } from "../entitlements.js";
-import { lineChart } from "../chart.js";
-import { escapeHtml, num, pct } from "../format.js";
-import { announce } from "../announcer.js";
+  category, country, metric, series, cagr, companyShares, icon } from "../data.js?v=7f674494";
+import { canSee, canSeeIndustry, canSeeCountry } from "../entitlements.js?v=7f674494";
+import { lineChart } from "../chart.js?v=7f674494";
+import { escapeHtml, num, pct } from "../format.js?v=7f674494";
+import { announce } from "../announcer.js?v=7f674494";
 
 const form = document.getElementById("explore-form");
 const tree = document.getElementById("tree");

@@ -4,9 +4,9 @@
  * statistics pages show, so a report never disagrees with its data.
  */
 import { GROUPS, CATEGORIES, COUNTRIES, COMPANIES, ALL_COMPANIES, LAST_ACTUAL, LAST_YEAR,
-  group, country, category, valueSeries, companyShares, cagr, rng, YEARS } from "./data.js";
-import { usdMillion, pct } from "./format.js";
-import { canSee } from "./entitlements.js";
+  group, country, category, valueSeries, companyShares, cagr, rng, YEARS } from "./data.js?v=7f674494";
+import { usdMillion, pct } from "./format.js?v=7f674494";
+import { canSee } from "./entitlements.js?v=7f674494";
 
 const MONTHS = ["Jun", "Jul", "Aug", "Sep", "Oct", "Nov"];
 
