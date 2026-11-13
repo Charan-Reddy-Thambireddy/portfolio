@@ -1,0 +1,42 @@
+@model DecisionFormModel
+@{
+    var caseId = (int)ViewData["CaseId"]!;
+    var authorizationId = (int)ViewData["AuthorizationId"]!;
+}
+
+@* The form tag helper adds the antiforgery token; tag helpers emit data-val-* for jQuery. *@
+<form asp-controller="Cases" asp-action="Decide"
+      asp-route-caseId="@caseId" asp-route-authorizationId="@authorizationId"
+      method="post" id="decision-form" novalidate>
+
+    <div asp-validation-summary="All" id="decision-error-summary"
+         class="alert alert-danger" role="alert" tabindex="-1"></div>
+
+    <fieldset class="mb-3">
+        <legend class="h5">Decision</legend>
+        <div class="form-check form-check-inline">
+            <input asp-for="Decision" type="radio" value="Approved" id="decision-approve" class="form-check-input" />
+            <label class="form-check-label" for="decision-approve">Approve</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input asp-for="Decision" type="radio" value="Denied" id="decision-deny" class="form-check-input" />
+            <label class="form-check-label" for="decision-deny">Deny</label>
+        </div>
+        <span asp-validation-for="Decision" class="invalid-feedback d-block"></span>
+    </fieldset>
+
+    <div class="mb-3">
+        <label asp-for="Reason" class="form-label"></label>
+        <div id="reason-hint" class="form-text">Required if denying. Write in plain language.</div>
+        <textarea asp-for="Reason" class="form-control" rows="4" maxlength="500"
+                  aria-describedby="reason-hint reason-count"
+                  data-val-requiredif="Enter a reason for the denial. It is included in the notice to the beneficiary."
+                  data-val-requiredif-dependson="Decision"
+                  data-val-requiredif-value="Denied"></textarea>
+        <span asp-validation-for="Reason" class="invalid-feedback d-block"></span>
+        <div id="reason-count" class="form-text">You have 500 characters remaining</div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit decision</button>
+    <a asp-action="Details" asp-route-id="@caseId" class="btn btn-outline-secondary">Cancel</a>
+</form>

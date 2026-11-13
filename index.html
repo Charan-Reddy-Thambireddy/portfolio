@@ -1,0 +1,1103 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><title>Charan Reddy | .NET Full Stack Developer Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Charan Reddy, .NET Full Stack Developer: 8+ years of C# full stack work with ASP.NET Core MVC and Web API, Entity Framework, SQL Server stored procedures, JavaScript, jQuery, Bootstrap and SCSS, unit testing and Git.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,800;1,400&display=swap">
+<style>
+/* Layout: one left-aligned reading column (max 70rem) with full-width bands; the live demo is the hero. */
+:root {
+  --bg: #f4f7f7;
+  --surface: #ffffff;
+  --ink: #12232a;
+  --muted: #45565d;
+  --line: #c9d5d8;
+  --accent: #0a5c70;
+  --accent-ink: #ffffff;
+  --band: #10303b;
+  --band-ink: #ffffff;
+  --band-muted: #c4dbe1;
+  --halo: #ffbf47;
+  --halo-ink: #0b0c0c;
+  --code-bg: #0f2229;
+  --code-ink: #e3eef1;
+  --ok: #1d6b3c;
+  --font-body: "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", Verdana, "Segoe UI", sans-serif;
+  --font-mono: "Atkinson Hyperlegible Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
+  --step--1: 0.9375rem;
+  --step-0: 1.0625rem;
+  --step-1: 1.3rem;
+  --step-2: 1.75rem;
+  --step-3: clamp(2.1rem, 1.5rem + 2.6vw, 3.4rem);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0c181d; --surface: #12242b; --ink: #e5eef0; --muted: #a8bcc2; --line: #2b4650;
+    --accent: #7fd0e2; --accent-ink: #06222a; --band: #081216; --band-ink: #f1f7f8; --band-muted: #a9c5cc;
+    --code-bg: #071216; --code-ink: #e3eef1; --ok: #7fd49b; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0c181d; --surface: #12242b; --ink: #e5eef0; --muted: #a8bcc2; --line: #2b4650;
+  --accent: #7fd0e2; --accent-ink: #06222a; --band: #081216; --band-ink: #f1f7f8; --band-muted: #a9c5cc;
+  --code-bg: #071216; --code-ink: #e3eef1; --ok: #7fd49b; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: var(--step-0); line-height: 1.6; }
+h1, h2, h3 { line-height: 1.15; text-wrap: balance; margin: 0; font-weight: 800; }
+h2 { font-size: var(--step-2); }
+h3 { font-size: var(--step-1); font-weight: 600; }
+p, ul, ol { margin: 0; }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+a:hover { text-decoration-thickness: 3px; }
+:focus-visible { outline: 3px solid var(--halo-ink); outline-offset: 2px; box-shadow: 0 0 0 6px var(--halo); border-radius: 2px; }
+.mono { font-family: var(--font-mono); font-size: 0.92em; }
+.num { font-variant-numeric: tabular-nums; text-align: right; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+.wrap { max-width: 70rem; margin-inline: auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.skip { position: absolute; left: 8px; top: 8px; z-index: 20; padding: 0.6rem 1rem; background: var(--halo); color: var(--halo-ink); font-weight: 600; transform: translateY(-200%); }
+.skip:focus { transform: none; }
+
+/* Top bar */
+.topbar { background: var(--band); color: var(--band-ink); }
+.topbar .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem 1.5rem; padding-block: 0.75rem; }
+.topbar a { color: var(--band-ink); }
+.brand { font-weight: 800; text-decoration: none; letter-spacing: 0.01em; display: inline-flex; align-items: center; min-height: 2.75rem; }
+.topbar ul { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; list-style: none; padding: 0; }
+.topbar li a { display: inline-flex; align-items: center; min-height: 2.75rem; padding-inline: 0.25rem; }
+
+/* Hero */
+.hero { background: var(--band); color: var(--band-ink); padding-block: 2.5rem 3.5rem; }
+.hero .wrap { display: grid; gap: 2.5rem; align-items: center; }
+@media (min-width: 60rem) { .hero .wrap { grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); } }
+.eyebrow { font-family: var(--font-mono); font-size: var(--step--1); letter-spacing: 0.06em; text-transform: uppercase; color: var(--halo); }
+.hero h1 { font-size: var(--step-3); margin-block: 0.75rem 1rem; letter-spacing: -0.01em; }
+.hero .lead { font-size: var(--step-1); color: var(--band-muted); max-width: 34rem; }
+.hero .lead strong { color: var(--band-ink); font-weight: 600; }
+.actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.75rem; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; min-height: 2.75rem; padding: 0.55rem 1.25rem; border: 2px solid var(--halo); border-radius: 4px; background: var(--halo); color: var(--halo-ink); font-weight: 600; text-decoration: none; }
+.btn:hover { text-decoration: underline; text-decoration-thickness: 2px; }
+.btn.ghost { background: transparent; color: var(--band-ink); border-color: var(--band-muted); }
+.contact { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; margin-top: 1.5rem; font-size: var(--step--1); color: var(--band-muted); }
+.contact a { color: var(--band-ink); }
+.contact > span { min-width: 0; max-width: 100%; }
+.contact .mono { overflow-wrap: anywhere; word-break: break-all; }
+.copy { min-height: 2rem; padding: 0.1rem 0.6rem; margin-left: 0.4rem; border: 1px solid var(--band-muted); border-radius: 4px; background: transparent; color: var(--band-ink); font: inherit; font-size: 0.85rem; cursor: pointer; }
+
+/* Browser-framed screenshot of the demo */
+.frame { margin: 0; border-radius: 10px; overflow: hidden; border: 1px solid #335560; background: #0a1418; box-shadow: 0 24px 60px -24px rgb(0 0 0 / 0.7); }
+.frame-bar { display: flex; align-items: center; gap: 0.4rem; padding: 0.55rem 0.8rem; background: #1b3640; color: #c4dbe1; font-family: var(--font-mono); font-size: 0.8rem; }
+.frame-bar i { width: 0.65rem; height: 0.65rem; border-radius: 50%; background: #4b6a74; }
+.frame-bar span { margin-left: 0.6rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.frame img { display: block; width: 100%; height: auto; }
+.frame figcaption { padding: 0.6rem 0.9rem; font-size: var(--step--1); color: #c4dbe1; background: #1b3640; }
+
+/* Sections */
+main section { padding-block: 3.5rem; border-bottom: 1px solid var(--line); }
+.section-head { display: grid; gap: 0.5rem; margin-bottom: 1.75rem; max-width: 46rem; }
+.section-head p { color: var(--muted); }
+.kicker { font-family: var(--font-mono); font-size: var(--step--1); color: var(--accent); letter-spacing: 0.05em; text-transform: uppercase; }
+
+/* Facts strip */
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; margin-top: -1.75rem; position: relative; }
+.fact { background: var(--surface); padding: 1.1rem 1.25rem; display: grid; gap: 0.2rem; align-content: start; }
+.fact b { font-size: var(--step-1); font-weight: 800; }
+.fact span { color: var(--muted); font-size: var(--step--1); }
+
+/* Try-it tasks */
+.tasks { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); list-style: none; padding: 0; counter-reset: task; }
+.task { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 1.25rem; display: grid; gap: 0.6rem; align-content: start; counter-increment: task; }
+.task h3::before { content: counter(task); display: inline-grid; place-items: center; width: 1.8rem; height: 1.8rem; margin-right: 0.6rem; border-radius: 50%; background: var(--accent); color: var(--accent-ink); font-size: 0.95rem; vertical-align: 0.1em; }
+.task ul { padding-left: 1.2rem; color: var(--muted); display: grid; gap: 0.3rem; }
+.task ul strong { color: var(--ink); font-weight: 600; }
+.task a.go { font-weight: 600; margin-top: 0.25rem; }
+kbd { font-family: var(--font-mono); font-size: 0.85em; padding: 0.05rem 0.35rem; border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 4px; background: var(--bg); color: var(--ink); }
+
+/* Gallery */
+.gallery { display: grid; gap: 1.25rem; margin-top: 2rem; }
+@media (min-width: 44rem) { .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.shot--phone img { object-fit: contain; object-position: center top; background: var(--bg); }
+.shot { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.shot img { display: block; width: 100%; height: 15rem; object-fit: cover; object-position: top left; border-bottom: 1px solid var(--line); }
+.shot figcaption { padding: 0.75rem 1rem; font-size: var(--step--1); color: var(--muted); }
+.shot figcaption b { color: var(--ink); display: block; font-weight: 600; }
+
+/* Evidence */
+.evidence { display: grid; gap: 1.5rem; }
+@media (min-width: 56rem) { .evidence { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); } }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 1.25rem; display: grid; gap: 1rem; align-content: start; min-width: 0; }
+.result-list { list-style: none; padding: 0; display: grid; gap: 0.65rem; }
+.result-list li { display: grid; grid-template-columns: auto 1fr; gap: 0.6rem; align-items: start; }
+.check { width: 1.35rem; height: 1.35rem; margin-top: 0.15rem; color: var(--ok); }
+.table-scroll { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: var(--step--1); }
+caption { text-align: left; font-weight: 600; font-size: var(--step-0); padding-bottom: 0.5rem; }
+th, td { text-align: left; padding: 0.5rem 0.6rem; border-bottom: 1px solid var(--line); vertical-align: middle; }
+thead th { border-bottom: 2px solid var(--ink); white-space: nowrap; }
+.swatch { display: inline-grid; place-items: center; width: 2.6rem; height: 1.9rem; border-radius: 4px; font-weight: 800; border: 1px solid var(--line); }
+.wcag { display: grid; gap: 0.5rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); list-style: none; padding: 0; }
+.wcag li { padding: 0.6rem 0.8rem; border-left: 4px solid var(--accent); background: var(--surface); border-radius: 0 6px 6px 0; font-size: var(--step--1); }
+.wcag b { font-family: var(--font-mono); font-weight: 600; margin-right: 0.35rem; }
+
+/* Code viewer */
+.code-tabs { display: flex; flex-wrap: wrap; gap: 0.25rem; border-bottom: 2px solid var(--line); }
+.code-tab { min-height: 2.75rem; padding: 0.4rem 0.9rem; border: 2px solid transparent; border-bottom: 0; border-radius: 6px 6px 0 0; margin-bottom: -2px; background: transparent; color: var(--accent); font: inherit; font-size: var(--step--1); text-decoration: underline; cursor: pointer; }
+.code-tab[aria-selected="true"] { background: var(--code-bg); color: var(--code-ink); border-color: var(--code-bg); text-decoration: none; font-weight: 600; }
+.code-panel { background: var(--code-bg); color: var(--code-ink); border-radius: 0 0 8px 8px; }
+.code-meta { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; justify-content: space-between; padding: 0.8rem 1rem; border-bottom: 1px solid #284650; font-size: var(--step--1); color: #b7cdd3; }
+.code-meta .mono { color: var(--halo); overflow-wrap: anywhere; min-width: 0; }
+.code-scroll { overflow: auto; max-height: 30rem; }
+.code-scroll pre { margin: 0; padding: 1rem; font-family: var(--font-mono); font-size: 0.85rem; line-height: 1.55; tab-size: 4; }
+
+/* Skills mapped to the role */
+.weights { display: grid; gap: 1rem; }
+.weight { display: grid; gap: 0.5rem 1.5rem; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 1.1rem 1.25rem; }
+@media (min-width: 48rem) { .weight { grid-template-columns: 14rem minmax(0, 1fr); } }
+.weight h3 { font-size: var(--step-0); }
+.bar { height: 0.5rem; border-radius: 99px; background: var(--line); overflow: hidden; margin-top: 0.5rem; }
+.bar span { display: block; height: 100%; background: var(--accent); }
+.weight p { color: var(--muted); font-size: var(--step--1); margin-top: 0.3rem; }
+.weight ul { padding-left: 1.1rem; display: grid; gap: 0.25rem; }
+
+/* Experience timeline */
+.timeline { list-style: none; padding: 0; display: grid; gap: 0; border-left: 2px solid var(--line); margin-left: 0.4rem; }
+.role { position: relative; padding: 0 0 2rem 1.5rem; display: grid; gap: 0.35rem; max-width: 52rem; }
+.role::before { content: ""; position: absolute; left: -0.5rem; top: 0.45rem; width: 0.9rem; height: 0.9rem; border-radius: 50%; background: var(--surface); border: 3px solid var(--accent); }
+.role .when { font-family: var(--font-mono); font-size: var(--step--1); color: var(--muted); }
+.role ul { padding-left: 1.1rem; display: grid; gap: 0.25rem; color: var(--muted); }
+.chips { display: flex; flex-wrap: wrap; gap: 0.4rem; list-style: none; padding: 0; }
+.chips li { padding: 0.15rem 0.6rem; border: 1px solid var(--line); border-radius: 99px; font-size: 0.85rem; background: var(--surface); }
+
+footer { padding-block: 2.5rem 3rem; color: var(--muted); font-size: var(--step--1); }
+footer .wrap { display: grid; gap: 0.6rem; }
+
+
+/* Added: requirements matrix, downloads, skills */
+.req-table td, .req-table th { vertical-align: top; }
+.req-table td:last-child { min-width: 16rem; }
+.req-group th { background: var(--bg); font-family: var(--font-mono); font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--accent); }
+.met { display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.1rem 0.55rem; border-radius: 99px; border: 1px solid var(--ok); color: var(--ok); font-weight: 600; font-size: 0.85rem; white-space: nowrap; }
+.met svg { width: 0.9rem; height: 0.9rem; }
+.note { color: var(--muted); font-size: var(--step--1); margin-top: 1rem; max-width: 52rem; }
+.duty-tag { font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent); letter-spacing: 0.05em; text-transform: uppercase; }
+.skills-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr)); }
+.skill-card { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 1.1rem 1.25rem; display: grid; gap: 0.6rem; align-content: start; }
+.skill-card h3 { font-size: var(--step-0); }
+.resume-box { display: grid; gap: 1.25rem; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 1.5rem; }
+@media (min-width: 48rem) { .resume-box { grid-template-columns: minmax(0, 1fr) auto; align-items: center; } }
+.resume-box .actions { margin-top: 0; }
+.resume-box .btn.ghost { color: var(--accent); border-color: var(--accent); }
+.dl-status { min-height: 1.5em; font-size: var(--step--1); color: var(--muted); }
+.code-viewer + .code-viewer-head { margin-top: 3rem; }
+.role h4 { font-size: var(--step--1); font-family: var(--font-mono); color: var(--muted); font-weight: 400; margin: 0.25rem 0 0; }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; scroll-behavior: auto !important; } }
+@media (forced-colors: active) { .task, .panel, .shot, .weight, .fact { border: 1px solid CanvasText; } :focus-visible { outline-color: Highlight; box-shadow: none; } }
+</style>
+
+</head><body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top">Charan Reddy</a>
+    <nav aria-label="Portfolio sections">
+      <ul>
+        <li><a href="#requirements">Requirements</a></li>
+        <li><a href="#project">Project</a></li>
+        <li><a href="#accessibility">Accessibility</a></li>
+        <li><a href="#code">Code</a></li>
+        <li><a href="#fit">Role fit</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#resume">Resume</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+  <div class="hero" id="top">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">.NET Full Stack Developer &#183; C# &#183; ASP.NET Core MVC &#183; WCAG 2.1 AA</p>
+        <h1>Accessible public-benefits software, from the SQL table to the screen reader.</h1>
+        <p class="lead">I'm Charan Reddy. I have <strong>8+ years</strong> of C#-first full stack experience: ASP.NET Core MVC and Web API, Entity Framework, SQL Server stored procedures, and JavaScript, jQuery, Bootstrap, Angular and React front ends. I currently work on a <strong>Medicaid and Medicare long-term care platform</strong> for a city social services agency.</p>
+        <div class="actions">
+          <a class="btn" href="demo/index.html">Open the live demo</a>
+          <a class="btn ghost" href="https://github.com/Charan-Reddy-Thambireddy/carebridge-ltc-portal">Source code on GitHub</a>
+          <a class="btn ghost" href="#resume">Download resume</a>
+        </div>
+        <p class="contact">
+          <span>Email: <span class="mono" id="email">charanreddythambireddy@gmail.com</span><button class="copy" type="button" data-copy="email" aria-label="Copy email address">Copy</button></span>
+          <span>Phone: <span class="mono">+1 (835) 263-0332</span></span>
+          <a href="https://www.linkedin.com/in/charan-reddy-thambireddy-729a70211/">LinkedIn profile</a>
+        </p>
+      </div>
+      <figure class="frame">
+        <div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>carebridge / eligibility.html</span></div>
+        <img src="images/hero-eligibility.png" alt="CareBridge eligibility screener after an empty submit: a red-bordered 'There is a problem' summary lists seven errors as links, and each question shows its own inline error message." width="1280" height="1180">
+        <figcaption>The eligibility screener's error summary. Focus moves here on submit.</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="facts" role="list" aria-label="At a glance">
+      <div class="fact" role="listitem"><b>8+ yrs &#183; C# first</b><span>Full stack since May 2018, four roles, two in government</span></div>
+      <div class="fact" role="listitem"><b>.NET 6/8 &#183; C#</b><span>ASP.NET Core MVC and Web API, EF Core, microservices</span></div>
+      <div class="fact" role="listitem"><b>Angular &#183; React</b><span>JavaScript, jQuery, HTML5, SCSS, TypeScript, Bootstrap</span></div>
+      <div class="fact" role="listitem"><b>WCAG 2.1 AA</b><span>axe DevTools, JAWS, keyboard and zoom testing</span></div>
+      <div class="fact" role="listitem"><b>Azure DevOps</b><span>CI/CD pipelines &#183; Microsoft AZ-204 certified</span></div>
+    </div>
+  </div>
+
+
+  <section id="requirements" aria-labelledby="req-heading">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Qualifications</p>
+        <h2 id="req-heading">Mandatory and desirable qualifications, line by line</h2>
+        <p>For the .NET Full Stack Developer contract in Albany, NY. Months are counted from May 2018 to November 2026 (about 102 months), using the dates on my resume.</p>
+      </div>
+      <div class="table-scroll" role="region" aria-labelledby="req-caption" tabindex="0">
+        <table class="req-table">
+          <caption id="req-caption">Requirement, what is asked, and where my experience shows it</caption>
+          <thead><tr><th scope="col">Requirement</th><th scope="col">Asked</th><th scope="col">Status</th><th scope="col">My experience</th></tr></thead>
+          <tbody>
+            <tr class="req-group"><th scope="rowgroup" colspan="4">Mandatory</th></tr>
+            <tr><th scope="row">System integration engineering (Level I)</th><td>3 to 7 years</td><td><span class="met"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m4 12.5 5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Meets</span></td><td>Integration work in every role: Kafka and RabbitMQ events between services, APIs across Karnataka state departments, NIC data-center beneficiary data, financial and reporting system integration at DSS, a Stripe payment gateway, and SSIS data synchronization.</td></tr>
+            <tr><th scope="row">Full stack developer, C# primary</th><td>72 months</td><td><span class="met"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m4 12.5 5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Meets</span></td><td><b>About 102 months</b>, C# first in all four roles: Blackwater Tech, Karnataka Agricultural Dept, Euromonitor, NYC DSS.</td></tr>
+            <tr><th scope="row">ASP.NET Core MVC (not .NET Framework MVC)</th><td>48 months</td><td><span class="met"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m4 12.5 5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Meets</span></td><td>ASP.NET Core in all four roles since 2018: MVC web apps at Blackwater Tech and the Karnataka department, then .NET 6/8 services and web apps at Euromonitor and DSS. See the <a href="#mvc-heading">MVC controller and Razor samples</a>.</td></tr>
+            <tr><th scope="row">Front end: jQuery, JavaScript, HTML5, Bootstrap, CSS/SCSS/LESS</th><td>48 months</td><td><span class="met"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m4 12.5 5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Meets</span></td><td>JavaScript, TypeScript, HTML5, CSS3, SCSS and Bootstrap since 2018, plus Angular Material, Angular and React. jQuery unobtrusive validation and AJAX are shown in the <a href="#mvc-heading">jQuery sample</a>; the CareBridge design system is written in SCSS.</td></tr>
+            <tr class="req-group"><th scope="rowgroup" colspan="4">Desirable</th></tr>
+            <tr><th scope="row">SQL queries and stored procedures</th><td>60 months</td><td><span class="met"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m4 12.5 5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Meets</span></td><td><b>About 102 months</b>: schema design, stored procedures, views, indexing and query tuning in every role, plus SSIS and SQL Server Agent jobs.</td></tr>
+            <tr><th scope="row">Entity Framework</th><td>36 months</td><td><span class="met"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m4 12.5 5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Meets</span></td><td>Entity Framework at Blackwater Tech and Karnataka, ORM tuning at Euromonitor, EF Core at DSS. LINQ, Dapper and ADO.NET where they fit better.</td></tr>
+            <tr><th scope="row">.NET Web API</th><td>36 months</td><td><span class="met"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m4 12.5 5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Meets</span></td><td><b>About 102 months</b>: RESTful APIs in every role, API contracts and versioning, OAuth 2.0 / OIDC with Azure AD. See the <a href="#mvc-heading">documented API sample</a>.</td></tr>
+            <tr><th scope="row">Writing and running unit tests</th><td>36 months</td><td><span class="met"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m4 12.5 5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Meets</span></td><td>xUnit and NUnit for .NET, Karma for front ends, Swagger and Postman for APIs, SonarQube/SonarCloud quality gates. See the <a href="#mvc-heading">xUnit sample</a>.</td></tr>
+            <tr><th scope="row">Git for code management</th><td>24 months</td><td><span class="met"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m4 12.5 5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Meets</span></td><td>Git with Azure DevOps and GitHub (GitHub Actions), and TFS earlier. Branching, pull requests and code reviews are part of every sprint.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="project" aria-labelledby="project-heading">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Featured project</p>
+        <h2 id="project-heading">CareBridge: long-term care and Medicare support portal</h2>
+        <p>An independent sample built for this application. The public side is a plain-language eligibility screener for Medicaid long-term care, home and community-based services, and the Medicare Savings Program. The staff side is a caseworker queue and a case page for approving or denying service authorizations. All data is fictional.</p>
+      </div>
+
+      <h3 id="try-heading">Try it yourself: three tasks, about five minutes</h3>
+      <p class="sr-only">Each task opens a page of the live demo.</p>
+      <ol class="tasks" aria-labelledby="try-heading">
+        <li class="task">
+          <h3>Make a mistake on the form</h3>
+          <ul>
+            <li>Select <strong>Check eligibility</strong> without answering.</li>
+            <li>Focus jumps to the error summary and the page title starts with "Error:".</li>
+            <li>Select an error link: focus goes to that field, with its label in view.</li>
+          </ul>
+          <a class="go" href="demo/eligibility.html">Open the eligibility screener</a>
+        </li>
+        <li class="task">
+          <h3>Work the queue by keyboard</h3>
+          <ul>
+            <li>Press <kbd>Tab</kbd> to a column heading and <kbd>Enter</kbd> to sort it.</li>
+            <li>A screen reader hears the column state through <code>aria-sort</code> and the new result count.</li>
+            <li>Filters apply only when you press <strong>Apply filters</strong>.</li>
+          </ul>
+          <a class="go" href="demo/cases.html">Open the caseworker queue</a>
+        </li>
+        <li class="task">
+          <h3>Decide a service authorization</h3>
+          <ul>
+            <li>Use <kbd>&#8592;</kbd> <kbd>&#8594;</kbd> to switch tabs, then choose <strong>Decide</strong>.</li>
+            <li>Choose Deny with no reason to see validation inside the dialog.</li>
+            <li><kbd>Esc</kbd> returns focus to the button that opened it.</li>
+          </ul>
+          <a class="go" href="demo/case.html?id=6">Open a sample case</a>
+        </li>
+      </ol>
+
+      <div class="gallery">
+        <figure class="shot"><img src="images/05-caseworker-queue.png" alt="Caseworker queue table sorted by beneficiary, with status and priority badges that use both text and shape." loading="lazy" width="1280" height="1964"><figcaption><b>Caseworker queue</b>Sortable headers, text-plus-shape status badges, and pagination with aria-current.</figcaption></figure>
+        <figure class="shot"><img src="images/07-decision-dialog-error.png" alt="Modal dialog titled Decide service authorization showing an error summary because Deny was selected without a reason." loading="lazy" width="1280" height="900"><figcaption><b>Decision dialog</b>Native modal dialog with a focus trap, labelled fields and its own error summary.</figcaption></figure>
+        <figure class="shot"><img src="images/08-decision-confirmed.png" alt="Case page with an accommodation alert asking for large-print notices and a Spanish interpreter, and a confirmation that home-delivered meals was approved." loading="lazy" width="1280" height="1210"><figcaption><b>Accommodation alert</b>A beneficiary's large-print and interpreter needs are shown to staff before any action.</figcaption></figure>
+        <figure class="shot shot--phone"><img src="images/10-mobile-320-queue.png" alt="The caseworker queue at 320 pixels wide, showing a collapsed menu button and the filter form stacked in one column." loading="lazy" width="320" height="720"><figcaption><b>Reflow at 320px</b>Equal to 400% zoom, with no horizontal page scrolling.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="accessibility" aria-labelledby="a11y-heading">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Accessibility evidence</p>
+        <h2 id="a11y-heading">Tested with tools, keyboard and assistive-technology patterns</h2>
+        <p>The project targets WCAG 2.1 AA and Section 508. Automated checks run in the CI pipeline and fail the build on any violation. The full criteria mapping and manual JAWS/NVDA test script are in the repository's <a href="https://github.com/Charan-Reddy-Thambireddy/carebridge-ltc-portal/blob/main/ACCESSIBILITY.md">ACCESSIBILITY.md</a>.</p>
+      </div>
+      <div class="evidence">
+        <div class="panel">
+          <h3>Automated results</h3>
+          <ul class="result-list">
+            <li><svg class="check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="11" fill="currentColor"/><path d="m7 12.5 3.2 3.2L17 9" fill="none" stroke="var(--surface)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>0 axe-core violations</b> across 13 page states, including form errors, the open dialog and a 320px viewport.</span></li>
+            <li><svg class="check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="11" fill="currentColor"/><path d="m7 12.5 3.2 3.2L17 9" fill="none" stroke="var(--surface)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>12 of 12 Playwright tests passing</b>: skip links, focus order, tabs, the dialog, live-region announcements and reflow.</span></li>
+            <li><svg class="check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="11" fill="currentColor"/><path d="m7 12.5 3.2 3.2L17 9" fill="none" stroke="var(--surface)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Every color token contrast-checked</b>. The lowest text pairing is 5.7:1.</span></li>
+          </ul>
+          <h3>Selected success criteria</h3>
+          <ul class="wcag">
+            <li><b>1.4.10</b>Reflow at 320px</li>
+            <li><b>2.4.3</b>Focus order in forms and dialogs</li>
+            <li><b>2.4.7</b>Two-tone visible focus ring</li>
+            <li><b>3.3.1</b>Error summary plus inline errors</li>
+            <li><b>4.1.2</b>ARIA tabs and aria-sort</li>
+            <li><b>4.1.3</b>Live-region status messages</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <div class="table-scroll" role="region" aria-labelledby="contrast-caption" tabindex="0">
+            <table>
+              <caption id="contrast-caption">Design-system color pairings</caption>
+              <thead><tr><th scope="col">Use</th><th scope="col">Sample</th><th scope="col">Colors</th><th scope="col" class="num">Ratio</th><th scope="col">Level</th></tr></thead>
+              <tbody><tr><th scope="row">Body text</th><td><span class="swatch" data-fg="#1b1f24" data-bg="#ffffff">Aa</span></td><td class="mono">#1b1f24 on #ffffff</td><td class="num">16.6:1</td><td>AAA</td></tr><tr><th scope="row">Primary / links</th><td><span class="swatch" data-fg="#0a5c70" data-bg="#ffffff">Aa</span></td><td class="mono">#0a5c70 on #ffffff</td><td class="num">7.6:1</td><td>AAA</td></tr><tr><th scope="row">Muted text</th><td><span class="swatch" data-fg="#4a5361" data-bg="#f3f5f7">Aa</span></td><td class="mono">#4a5361 on #f3f5f7</td><td class="num">7.1:1</td><td>AAA</td></tr><tr><th scope="row">Error</th><td><span class="swatch" data-fg="#b0261d" data-bg="#fdeceb">Aa</span></td><td class="mono">#b0261d on #fdeceb</td><td class="num">5.9:1</td><td>AA</td></tr><tr><th scope="row">Success</th><td><span class="swatch" data-fg="#1d6b3c" data-bg="#e5f3ea">Aa</span></td><td class="mono">#1d6b3c on #e5f3ea</td><td class="num">5.7:1</td><td>AA</td></tr><tr><th scope="row">Warning</th><td><span class="swatch" data-fg="#7a4f00" data-bg="#fff4d6">Aa</span></td><td class="mono">#7a4f00 on #fff4d6</td><td class="num">6.5:1</td><td>AA</td></tr><tr><th scope="row">Header text</th><td><span class="swatch" data-fg="#ffffff" data-bg="#10303b">Aa</span></td><td class="mono">#ffffff on #10303b</td><td class="num">13.9:1</td><td>AAA</td></tr><tr><th scope="row">Input border</th><td><span class="swatch" data-fg="#6b7480" data-bg="#ffffff">Aa</span></td><td class="mono">#6b7480 on #ffffff</td><td class="num">4.7:1</td><td>AA, 3:1 for UI</td></tr></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="code" aria-labelledby="code-heading">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Code samples</p>
+        <h2 id="code-heading">Excerpts from the repository</h2>
+        <p>These are unedited extracts. The full solution has an ASP.NET Core 8 API, EF Core, xUnit and WebApplicationFactory tests, a Sass design system, SQL Server scripts, and GitHub Actions and Azure DevOps pipelines. <a href="https://github.com/Charan-Reddy-Thambireddy/carebridge-ltc-portal">Browse all of it on GitHub</a>.</p>
+      </div>
+      <div class="code-viewer">
+        <div class="code-tabs" role="tablist" aria-label="Code samples"><button type="button" role="tab" class="code-tab" id="code-tab-csharp" aria-controls="code-panel-csharp" aria-selected="true">C# service</button><button type="button" role="tab" class="code-tab" id="code-tab-js" aria-controls="code-panel-js" aria-selected="false" tabindex="-1">JS error summary</button><button type="button" role="tab" class="code-tab" id="code-tab-tabs" aria-controls="code-panel-tabs" aria-selected="false" tabindex="-1">JS tabs</button><button type="button" role="tab" class="code-tab" id="code-tab-sass" aria-controls="code-panel-sass" aria-selected="false" tabindex="-1">Sass tokens</button><button type="button" role="tab" class="code-tab" id="code-tab-sql" aria-controls="code-panel-sql" aria-selected="false" tabindex="-1">SQL procedure</button><button type="button" role="tab" class="code-tab" id="code-tab-test" aria-controls="code-panel-test" aria-selected="false" tabindex="-1">Playwright test</button></div>
+          <div role="tabpanel" class="code-panel" id="code-panel-csharp" aria-labelledby="code-tab-csharp">
+            <p class="code-meta"><span class="mono">src/CareBridge.Api/Services/CaseService.cs</span><span>Decision with audit trail in one transaction; 409 when already decided; no PII written to the audit log.</span></p>
+            <div class="code-scroll" role="region" aria-label="C# service source code" tabindex="0"><pre><code>public async Task&lt;DecisionOutcome&gt; DecideAuthorizationAsync(
+    int caseId, int authorizationId, AuthorizationDecisionRequest request, CancellationToken ct)
+{
+    var auth = await _db.ServiceAuthorizations
+        .SingleOrDefaultAsync(a =&gt; a.Id == authorizationId &amp;&amp; a.CaseRecordId == caseId, ct);
+
+    if (auth is null)
+    {
+        return new DecisionOutcome(DecisionResultKind.NotFound);
+    }
+
+    if (auth.Status != AuthorizationStatus.Pending)
+    {
+        return new DecisionOutcome(DecisionResultKind.AlreadyDecided, ToDto(auth));
+    }
+
+    auth.Status = request.Decision!.Value;
+    auth.DecisionReason = string.IsNullOrWhiteSpace(request.Reason) ? null : request.Reason.Trim();
+    auth.DecidedBy = _user.UserName;
+    auth.DecidedUtc = _clock.GetUtcNow().UtcDateTime;
+
+    // Never write PII into audit details; reference records by ID only.
+    _audit.Record(
+        action: $&quot;Authorization{auth.Status}&quot;,
+        entityType: nameof(ServiceAuthorization),
+        entityId: auth.Id.ToString(System.Globalization.CultureInfo.InvariantCulture),
+        details: $&quot;Case {caseId}; service {auth.ServiceCode}&quot;);
+
+    await _db.SaveChangesAsync(ct);
+    return new DecisionOutcome(DecisionResultKind.Success, ToDto(auth));
+}</code></pre></div>
+          </div>
+          <div role="tabpanel" class="code-panel" id="code-panel-js" aria-labelledby="code-tab-js" hidden>
+            <p class="code-meta"><span class="mono">src/CareBridge.Api/wwwroot/js/a11y/form-errors.js</span><span>Error summary that takes focus, links to each field, and wires aria-invalid and aria-describedby.</span></p>
+            <div class="code-scroll" role="region" aria-label="JS error summary source code" tabindex="0"><pre><code>export function showErrors(form, summary, errors) {
+  clearErrors(form, summary);
+  if (!errors.length) {
+    return;
+  }
+
+  const list = summary.querySelector(&quot;ul&quot;);
+
+  for (const { field, message } of errors) {
+    const control = form.querySelector(`#${CSS.escape(field)}`);
+    if (!control) {
+      continue;
+    }
+
+    const group = control.closest(&quot;.bcn-form-group&quot;);
+    const owner = describedElementFor(control);
+    const messageEl = group?.querySelector(&quot;.bcn-error-message&quot;);
+
+    group?.classList.add(&quot;bcn-form-group--error&quot;);
+
+    // Mark every control in a radio/checkbox group invalid, not just the first.
+    const controls = owner.tagName === &quot;FIELDSET&quot; ? owner.querySelectorAll(&quot;input&quot;) : [control];
+    controls.forEach((c) =&gt; c.setAttribute(&quot;aria-invalid&quot;, &quot;true&quot;));
+
+    if (messageEl) {
+      messageEl.querySelector(&quot;[data-error-text]&quot;).textContent = message;
+      messageEl.hidden = false;
+      addToken(owner, &quot;aria-describedby&quot;, messageEl.id);
+    }
+
+    const item = document.createElement(&quot;li&quot;);
+    const link = document.createElement(&quot;a&quot;);
+    link.href = `#${field}`;
+    link.textContent = message;
+    link.addEventListener(&quot;click&quot;, (event) =&gt; {
+      // Default anchor behaviour scrolls but does not reliably focus form controls, and it
+      // hides the label/legend above the input. Focus the control and scroll its label into view.
+      event.preventDefault();
+      const label = owner.tagName === &quot;FIELDSET&quot;
+        ? owner.querySelector(&quot;legend&quot;)
+        : form.querySelector(`label[for=&quot;${CSS.escape(field)}&quot;]`);
+      (label || control).scrollIntoView({ block: &quot;start&quot; });
+      control.focus({ preventScroll: true });
+    });
+    item.append(link);
+    list.append(item);
+  }
+
+  if (!document.title.startsWith(ERROR_TITLE_PREFIX)) {
+    document.title = ERROR_TITLE_PREFIX + document.title;
+  }
+
+  summary.hidden = false;
+  summary.focus();
+}</code></pre></div>
+          </div>
+          <div role="tabpanel" class="code-panel" id="code-panel-tabs" aria-labelledby="code-tab-tabs" hidden>
+            <p class="code-meta"><span class="mono">src/CareBridge.Api/wwwroot/js/a11y/tabs.js</span><span>WAI-ARIA tabs with roving tabindex, arrow keys, Home and End.</span></p>
+            <div class="code-scroll" role="region" aria-label="JS tabs source code" tabindex="0"><pre><code>tab.addEventListener(&quot;keydown&quot;, (event) =&gt; {
+  let next = null;
+  switch (event.key) {
+    case &quot;ArrowRight&quot;:
+      next = (index + 1) % tabs.length;
+      break;
+    case &quot;ArrowLeft&quot;:
+      next = (index - 1 + tabs.length) % tabs.length;
+      break;
+    case &quot;Home&quot;:
+      next = 0;
+      break;
+    case &quot;End&quot;:
+      next = tabs.length - 1;
+      break;
+    default:
+      return;
+  }
+  event.preventDefault();
+  select(next);
+});</code></pre></div>
+          </div>
+          <div role="tabpanel" class="code-panel" id="code-panel-sass" aria-labelledby="code-tab-sass" hidden>
+            <p class="code-meta"><span class="mono">src/CareBridge.Api/Styles/tokens/_mixins.scss</span><span>Two-tone focus ring and screen-reader-only utility from the design system.</span></p>
+            <div class="code-scroll" role="region" aria-label="Sass tokens source code" tabindex="0"><pre><code>// Two-tone focus indicator (WCAG 2.4.7 Focus Visible, 2.4.11/2.4.13 in WCAG 2.2):
+// a dark outline plus a yellow halo stays visible on light, dark and brand backgrounds.
+@mixin focus-ring {
+  outline: 3px solid var(--bcn-color-focus-ink);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 6px var(--bcn-color-focus);
+}
+
+// Hides content visually while keeping it available to screen readers.
+@mixin visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}</code></pre></div>
+          </div>
+          <div role="tabpanel" class="code-panel" id="code-panel-sql" aria-labelledby="code-tab-sql" hidden>
+            <p class="code-meta"><span class="mono">database/002_stored_procedures.sql</span><span>Atomic decision + audit insert with UPDLOCK to serialize concurrent reviewers.</span></p>
+            <div class="code-scroll" role="region" aria-label="SQL procedure source code" tabindex="0"><pre><code>CREATE OR ALTER PROCEDURE dbo.usp_DecideServiceAuthorization
+    @CaseRecordId     INT,
+    @AuthorizationId  INT,
+    @Decision         NVARCHAR(20),
+    @Reason           NVARCHAR(500) = NULL,
+    @Actor            NVARCHAR(120),
+    @CorrelationId    NVARCHAR(64)  = NULL
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SET XACT_ABORT ON;
+
+    IF @Decision NOT IN (N&#x27;Approved&#x27;, N&#x27;Denied&#x27;)
+        THROW 50001, N&#x27;Decision must be Approved or Denied.&#x27;, 1;
+    IF @Decision = N&#x27;Denied&#x27; AND NULLIF(LTRIM(RTRIM(@Reason)), N&#x27;&#x27;) IS NULL
+        THROW 50002, N&#x27;A denial requires a reason.&#x27;, 1;
+
+    BEGIN TRANSACTION;
+
+    DECLARE @Current NVARCHAR(20);
+    SELECT  @Current = Status
+    FROM    dbo.ServiceAuthorization WITH (UPDLOCK, HOLDLOCK)   -- serialize concurrent decisions
+    WHERE   Id = @AuthorizationId AND CaseRecordId = @CaseRecordId;
+
+    IF @Current IS NULL BEGIN ROLLBACK; RETURN 1; END;
+    IF @Current &lt;&gt; N&#x27;Pending&#x27; BEGIN ROLLBACK; RETURN 2; END;
+
+    UPDATE  dbo.ServiceAuthorization
+    SET     Status = @Decision,
+            DecisionReason = NULLIF(LTRIM(RTRIM(@Reason)), N&#x27;&#x27;),
+            DecidedBy = @Actor,
+            DecidedUtc = SYSUTCDATETIME()
+    WHERE   Id = @AuthorizationId;
+
+    INSERT dbo.AuditEntry (TimestampUtc, Actor, Action, EntityType, EntityId, Details, CorrelationId)
+    VALUES (SYSUTCDATETIME(), @Actor, N&#x27;Authorization&#x27; + @Decision, N&#x27;ServiceAuthorization&#x27;,
+            CAST(@AuthorizationId AS NVARCHAR(40)), N&#x27;Case &#x27; + CAST(@CaseRecordId AS NVARCHAR(20)), @CorrelationId);
+
+    COMMIT;
+    RETURN 0;
+END;</code></pre></div>
+          </div>
+          <div role="tabpanel" class="code-panel" id="code-panel-test" aria-labelledby="code-tab-test" hidden>
+            <p class="code-meta"><span class="mono">tests/accessibility/a11y.spec.js</span><span>Automated check that the dialog manages focus, validates, and passes axe in its error state.</span></p>
+            <div class="code-scroll" role="region" aria-label="Playwright test source code" tabindex="0"><pre><code>test(&quot;decision dialog manages focus, validates, and returns focus&quot;, async ({ page }) =&gt; {
+  await page.goto(&quot;/case.html?id=5#tab-authorizations&quot;);
+  const decide = page.getByRole(&quot;button&quot;, { name: /^Decide on / }).first();
+  await decide.click();
+
+  const dialog = page.getByRole(&quot;dialog&quot;, { name: &quot;Decide service authorization&quot; });
+  await expect(dialog).toBeVisible();
+  await expect(page.locator(&quot;#decision-approve&quot;)).toBeFocused();
+
+  await page.getByLabel(&quot;Deny&quot;, { exact: true }).check();
+  await dialog.getByRole(&quot;button&quot;, { name: &quot;Submit decision&quot; }).click();
+  await expect(page.locator(&quot;#decision-error-summary&quot;)).toBeFocused();
+  await expectNoViolations(page, &quot;decision dialog error state&quot;);
+
+  await page.keyboard.press(&quot;Escape&quot;);
+  await expect(dialog).toBeHidden();
+  await expect(decide).toBeFocused();
+
+  await decide.click();
+  await page.getByLabel(&quot;Approve&quot;, { exact: true }).check();
+  await dialog.getByRole(&quot;button&quot;, { name: &quot;Submit decision&quot; }).click();
+  await expect(page.locator(&quot;#decision-notice&quot;)).toBeFocused();
+  await expect(page.locator(&quot;#decision-notice&quot;)).toContainText(&quot;was approved&quot;);
+});</code></pre></div>
+          </div>
+      </div>
+      <div class="section-head code-viewer-head">
+        <h3 id="mvc-heading">ASP.NET Core MVC, jQuery, unit tests and API documentation</h3>
+        <p>Full files are in this site's <a href="https://github.com/Charan-Reddy-Thambireddy/portfolio/tree/main/samples">samples folder on GitHub</a>. The same service-authorization decision, carried through the stack the role asks for: an MVC controller and Razor view styled with Bootstrap, jQuery validation and AJAX, xUnit tests, and a Web API endpoint whose XML comments produce the Swagger documentation.</p>
+      </div>
+      <div class="code-viewer">
+        <div class="code-tabs" role="tablist" aria-label="MVC, jQuery and testing samples"><button type="button" role="tab" class="code-tab" id="code-tab-mvc-ctrl" aria-controls="code-panel-mvc-ctrl" aria-selected="true">MVC controller</button><button type="button" role="tab" class="code-tab" id="code-tab-mvc-model" aria-controls="code-panel-mvc-model" aria-selected="false" tabindex="-1">View model</button><button type="button" role="tab" class="code-tab" id="code-tab-mvc-razor" aria-controls="code-panel-mvc-razor" aria-selected="false" tabindex="-1">Razor + Bootstrap</button><button type="button" role="tab" class="code-tab" id="code-tab-mvc-jq" aria-controls="code-panel-mvc-jq" aria-selected="false" tabindex="-1">jQuery</button><button type="button" role="tab" class="code-tab" id="code-tab-mvc-xunit" aria-controls="code-panel-mvc-xunit" aria-selected="false" tabindex="-1">xUnit tests</button><button type="button" role="tab" class="code-tab" id="code-tab-mvc-doc" aria-controls="code-panel-mvc-doc" aria-selected="false" tabindex="-1">API docs</button></div>
+          <div role="tabpanel" class="code-panel" id="code-panel-mvc-ctrl" aria-labelledby="code-tab-mvc-ctrl">
+            <p class="code-meta"><span class="mono">Controllers/CasesController.cs</span><span>Razor MVC controller: AJAX partial refresh, ModelState, antiforgery and Post/Redirect/Get.</span></p>
+            <div class="code-scroll" role="region" aria-label="MVC controller source code" tabindex="0"><pre><code>[Authorize(Roles = &quot;Caseworker,Supervisor&quot;)]
+[AutoValidateAntiforgeryToken]
+public sealed class CasesController : Controller
+{
+    private readonly ICaseService _cases;
+
+    public CasesController(ICaseService cases) =&gt; _cases = cases;
+
+    // GET /Cases?Status=Pending&amp;Program=MLTC&amp;Sort=beneficiary&amp;Page=2
+    [HttpGet]
+    public async Task&lt;IActionResult&gt; Index([FromQuery] CaseQueueQuery query, CancellationToken ct)
+    {
+        var model = new CaseQueueViewModel(query, await _cases.GetQueueAsync(query, ct));
+
+        // The jQuery filter form asks for the table partial only, so results refresh in place.
+        return Request.Headers.XRequestedWith == &quot;XMLHttpRequest&quot;
+            ? PartialView(&quot;_CaseTable&quot;, model)
+            : View(model);
+    }
+
+    [HttpPost(&quot;Cases/{caseId:int}/Authorizations/{authorizationId:int}/Decision&quot;)]
+    public async Task&lt;IActionResult&gt; Decide(
+        int caseId, int authorizationId, DecisionFormModel form, CancellationToken ct)
+    {
+        if (!ModelState.IsValid)
+        {
+            // Redisplay with server-side errors; the same rules also run client-side.
+            ViewData[&quot;CaseId&quot;] = caseId;
+            ViewData[&quot;AuthorizationId&quot;] = authorizationId;
+            return View(&quot;Details&quot;, await _cases.GetDetailsAsync(caseId, form, ct));
+        }
+
+        var outcome = await _cases.DecideAuthorizationAsync(caseId, authorizationId, form.ToRequest(), ct);
+
+        switch (outcome.Kind)
+        {
+            case DecisionResultKind.NotFound:
+                return NotFound();
+            case DecisionResultKind.AlreadyDecided:
+                TempData[&quot;Notice&quot;] = &quot;Another reviewer already decided this authorization.&quot;;
+                break;
+            default:
+                TempData[&quot;Notice&quot;] = $&quot;{outcome.Authorization!.ServiceName} was {outcome.Authorization.Status.ToString().ToLowerInvariant()}.&quot;;
+                break;
+        }
+
+        // Post/Redirect/Get: a browser refresh never re-submits the decision.
+        return RedirectToAction(nameof(Details), new { id = caseId });
+    }
+}</code></pre></div>
+          </div>
+          <div role="tabpanel" class="code-panel" id="code-panel-mvc-model" aria-labelledby="code-tab-mvc-model" hidden>
+            <p class="code-meta"><span class="mono">Models/DecisionFormModel.cs</span><span>Data annotations plus a cross-field rule through IValidatableObject.</span></p>
+            <div class="code-scroll" role="region" aria-label="View model source code" tabindex="0"><pre><code>public sealed class DecisionFormModel : IValidatableObject
+{
+    [Required(ErrorMessage = &quot;Select approve or deny.&quot;)]
+    public AuthorizationStatus? Decision { get; set; }
+
+    [Display(Name = &quot;Reason&quot;)]
+    [StringLength(500, ErrorMessage = &quot;The reason must be 500 characters or fewer.&quot;)]
+    public string? Reason { get; set; }
+
+    // Cross-field rule. jQuery mirrors it client-side through the &quot;requiredif&quot; adapter.
+    public IEnumerable&lt;ValidationResult&gt; Validate(ValidationContext context)
+    {
+        if (Decision == AuthorizationStatus.Denied &amp;&amp; string.IsNullOrWhiteSpace(Reason))
+        {
+            yield return new ValidationResult(
+                &quot;Enter a reason for the denial. It is included in the notice to the beneficiary.&quot;,
+                new[] { nameof(Reason) });
+        }
+    }
+
+    public AuthorizationDecisionRequest ToRequest() =&gt; new()
+    {
+        Decision = Decision,
+        Reason = Reason
+    };
+}</code></pre></div>
+          </div>
+          <div role="tabpanel" class="code-panel" id="code-panel-mvc-razor" aria-labelledby="code-tab-mvc-razor" hidden>
+            <p class="code-meta"><span class="mono">Views/Cases/_DecisionForm.cshtml</span><span>Tag helpers, Bootstrap 5 form classes, validation summary and data-val attributes.</span></p>
+            <div class="code-scroll" role="region" aria-label="Razor + Bootstrap source code" tabindex="0"><pre><code>@model DecisionFormModel
+@{
+    var caseId = (int)ViewData[&quot;CaseId&quot;]!;
+    var authorizationId = (int)ViewData[&quot;AuthorizationId&quot;]!;
+}
+
+@* The form tag helper adds the antiforgery token; tag helpers emit data-val-* for jQuery. *@
+&lt;form asp-controller=&quot;Cases&quot; asp-action=&quot;Decide&quot;
+      asp-route-caseId=&quot;@caseId&quot; asp-route-authorizationId=&quot;@authorizationId&quot;
+      method=&quot;post&quot; id=&quot;decision-form&quot; novalidate&gt;
+
+    &lt;div asp-validation-summary=&quot;All&quot; id=&quot;decision-error-summary&quot;
+         class=&quot;alert alert-danger&quot; role=&quot;alert&quot; tabindex=&quot;-1&quot;&gt;&lt;/div&gt;
+
+    &lt;fieldset class=&quot;mb-3&quot;&gt;
+        &lt;legend class=&quot;h5&quot;&gt;Decision&lt;/legend&gt;
+        &lt;div class=&quot;form-check form-check-inline&quot;&gt;
+            &lt;input asp-for=&quot;Decision&quot; type=&quot;radio&quot; value=&quot;Approved&quot; id=&quot;decision-approve&quot; class=&quot;form-check-input&quot; /&gt;
+            &lt;label class=&quot;form-check-label&quot; for=&quot;decision-approve&quot;&gt;Approve&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-check form-check-inline&quot;&gt;
+            &lt;input asp-for=&quot;Decision&quot; type=&quot;radio&quot; value=&quot;Denied&quot; id=&quot;decision-deny&quot; class=&quot;form-check-input&quot; /&gt;
+            &lt;label class=&quot;form-check-label&quot; for=&quot;decision-deny&quot;&gt;Deny&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;span asp-validation-for=&quot;Decision&quot; class=&quot;invalid-feedback d-block&quot;&gt;&lt;/span&gt;
+    &lt;/fieldset&gt;
+
+    &lt;div class=&quot;mb-3&quot;&gt;
+        &lt;label asp-for=&quot;Reason&quot; class=&quot;form-label&quot;&gt;&lt;/label&gt;
+        &lt;div id=&quot;reason-hint&quot; class=&quot;form-text&quot;&gt;Required if denying. Write in plain language.&lt;/div&gt;
+        &lt;textarea asp-for=&quot;Reason&quot; class=&quot;form-control&quot; rows=&quot;4&quot; maxlength=&quot;500&quot;
+                  aria-describedby=&quot;reason-hint reason-count&quot;
+                  data-val-requiredif=&quot;Enter a reason for the denial. It is included in the notice to the beneficiary.&quot;
+                  data-val-requiredif-dependson=&quot;Decision&quot;
+                  data-val-requiredif-value=&quot;Denied&quot;&gt;&lt;/textarea&gt;
+        &lt;span asp-validation-for=&quot;Reason&quot; class=&quot;invalid-feedback d-block&quot;&gt;&lt;/span&gt;
+        &lt;div id=&quot;reason-count&quot; class=&quot;form-text&quot;&gt;You have 500 characters remaining&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Submit decision&lt;/button&gt;
+    &lt;a asp-action=&quot;Details&quot; asp-route-id=&quot;@caseId&quot; class=&quot;btn btn-outline-secondary&quot;&gt;Cancel&lt;/a&gt;
+&lt;/form&gt;</code></pre></div>
+          </div>
+          <div role="tabpanel" class="code-panel" id="code-panel-mvc-jq" aria-labelledby="code-tab-mvc-jq" hidden>
+            <p class="code-meta"><span class="mono">wwwroot/js/case-queue.js</span><span>A custom unobtrusive-validation adapter, error-summary focus, and AJAX filtering.</span></p>
+            <div class="code-scroll" role="region" aria-label="jQuery source code" tabindex="0"><pre><code>// wwwroot/js/case-queue.js (jQuery 3.7, jquery.validate and jquery.validate.unobtrusive)
+$(function () {
+  // 1. Client-side mirror of DecisionFormModel.Validate: a reason is required when denying.
+  $.validator.addMethod(&quot;requiredif&quot;, function (value, element, params) {
+    const chosen = $(element).closest(&quot;form&quot;).find(`input[name=&quot;${params.dependsOn}&quot;]:checked`).val();
+    return chosen !== params.value || $.trim(value).length &gt; 0;
+  });
+  $.validator.unobtrusive.adapters.add(&quot;requiredif&quot;, [&quot;dependson&quot;, &quot;value&quot;], function (options) {
+    options.rules.requiredif = { dependsOn: options.params.dependson, value: options.params.value };
+    options.messages.requiredif = options.message;
+  });
+
+  const $decision = $(&quot;#decision-form&quot;);
+
+  // Re-check the reason when the decision changes, but only once an error is showing.
+  $decision.on(&quot;change&quot;, &#x27;input[name=&quot;Decision&quot;]&#x27;, function () {
+    const $reason = $decision.find(&quot;#Reason&quot;);
+    if ($reason.hasClass(&quot;input-validation-error&quot;)) {
+      $reason.valid();
+    }
+  });
+
+  // Unobtrusive validation fills the summary first; then move focus to it (WCAG 3.3.1).
+  $decision.on(&quot;invalid-form.validate&quot;, function () {
+    setTimeout(() =&gt; $(&quot;#decision-error-summary&quot;).trigger(&quot;focus&quot;), 0);
+  });
+
+  $decision.on(&quot;input&quot;, &quot;#Reason&quot;, function () {
+    $(&quot;#reason-count&quot;).text(`You have ${500 - this.value.length} characters remaining`);
+  });
+
+  // 2. Queue filters: fetch the table partial with AJAX instead of reloading the page.
+  $(&quot;#queue-filters&quot;).on(&quot;submit&quot;, function (event) {
+    event.preventDefault();
+    const $form = $(this);
+    const $table = $(&quot;#case-table&quot;).attr(&quot;aria-busy&quot;, &quot;true&quot;);
+    const query = $form.serialize();
+
+    $.ajax({ url: $form.attr(&quot;action&quot;), data: query, cache: false })
+      .done(function (html) {
+        $table.html(html);
+        history.replaceState(null, &quot;&quot;, `${$form.attr(&quot;action&quot;)}?${query}`);
+        // Polite live region: &quot;Showing 1 to 10 of 24 cases, sorted by beneficiary.&quot;
+        $(&quot;#queue-status&quot;).text($table.find(&quot;[data-result-summary]&quot;).text());
+      })
+      .fail(function () {
+        $(&quot;#queue-status&quot;).text(&quot;Cases could not be loaded. Try again.&quot;);
+      })
+      .always(function () {
+        $table.attr(&quot;aria-busy&quot;, &quot;false&quot;);
+      });
+  });
+});</code></pre></div>
+          </div>
+          <div role="tabpanel" class="code-panel" id="code-panel-mvc-xunit" aria-labelledby="code-tab-mvc-xunit" hidden>
+            <p class="code-meta"><span class="mono">tests/CareBridge.Tests/CaseServiceTests.cs</span><span>Unit tests for the decision service (EF Core in-memory, FakeTimeProvider) and the view model.</span></p>
+            <div class="code-scroll" role="region" aria-label="xUnit tests source code" tabindex="0"><pre><code>public sealed class CaseServiceTests
+{
+    private readonly CareBridgeDbContext _db = new(
+        new DbContextOptionsBuilder&lt;CareBridgeDbContext&gt;()
+            .UseInMemoryDatabase(Guid.NewGuid().ToString())
+            .Options);
+
+    private readonly FakeAuditLog _audit = new();
+
+    private CaseService CreateSut() =&gt; new(
+        _db,
+        _audit,
+        new FakeCurrentUser(&quot;demo.caseworker&quot;),
+        new FakeTimeProvider(new DateTimeOffset(2026, 3, 10, 14, 0, 0, TimeSpan.Zero)));
+
+    private async Task SeedPendingAsync(AuthorizationStatus status = AuthorizationStatus.Pending)
+    {
+        _db.ServiceAuthorizations.Add(new ServiceAuthorization
+        {
+            Id = 7, CaseRecordId = 2, ServiceCode = &quot;HDM&quot;, Status = status
+        });
+        await _db.SaveChangesAsync();
+    }
+
+    [Fact]
+    public async Task Deny_records_trimmed_reason_reviewer_and_audit_entry()
+    {
+        await SeedPendingAsync();
+
+        var outcome = await CreateSut().DecideAuthorizationAsync(2, 7,
+            new AuthorizationDecisionRequest
+            {
+                Decision = AuthorizationStatus.Denied,
+                Reason = &quot;  Needs are met by adult day health.  &quot;
+            },
+            CancellationToken.None);
+
+        Assert.Equal(DecisionResultKind.Success, outcome.Kind);
+        var saved = await _db.ServiceAuthorizations.SingleAsync(a =&gt; a.Id == 7);
+        Assert.Equal(AuthorizationStatus.Denied, saved.Status);
+        Assert.Equal(&quot;Needs are met by adult day health.&quot;, saved.DecisionReason);
+        Assert.Equal(&quot;demo.caseworker&quot;, saved.DecidedBy);
+
+        var entry = Assert.Single(_audit.Entries);
+        Assert.Equal(&quot;AuthorizationDenied&quot;, entry.Action);
+        Assert.Equal(&quot;Case 2; service HDM&quot;, entry.Details); // IDs only, never PII
+    }
+
+    [Theory]
+    [InlineData(AuthorizationStatus.Approved)]
+    [InlineData(AuthorizationStatus.Denied)]
+    public async Task Already_decided_authorization_is_left_unchanged(AuthorizationStatus existing)
+    {
+        await SeedPendingAsync(existing);
+
+        var outcome = await CreateSut().DecideAuthorizationAsync(2, 7,
+            new AuthorizationDecisionRequest { Decision = AuthorizationStatus.Approved },
+            CancellationToken.None);
+
+        Assert.Equal(DecisionResultKind.AlreadyDecided, outcome.Kind);
+        Assert.Empty(_audit.Entries);
+    }
+
+    [Fact]
+    public async Task Authorization_on_a_different_case_is_not_found()
+    {
+        await SeedPendingAsync();
+
+        var outcome = await CreateSut().DecideAuthorizationAsync(99, 7,
+            new AuthorizationDecisionRequest { Decision = AuthorizationStatus.Approved },
+            CancellationToken.None);
+
+        Assert.Equal(DecisionResultKind.NotFound, outcome.Kind);
+    }
+
+    [Fact]
+    public void Denial_without_a_reason_fails_model_validation()
+    {
+        var form = new DecisionFormModel { Decision = AuthorizationStatus.Denied, Reason = &quot; &quot; };
+        var results = new List&lt;ValidationResult&gt;();
+
+        var valid = Validator.TryValidateObject(form, new ValidationContext(form), results, validateAllProperties: true);
+
+        Assert.False(valid);
+        Assert.Contains(results, r =&gt; r.MemberNames.Contains(nameof(DecisionFormModel.Reason)));
+    }
+}</code></pre></div>
+          </div>
+          <div role="tabpanel" class="code-panel" id="code-panel-mvc-doc" aria-labelledby="code-tab-mvc-doc" hidden>
+            <p class="code-meta"><span class="mono">Controllers/Api/AuthorizationsController.cs</span><span>XML comments and response types that generate the Swagger/OpenAPI documentation.</span></p>
+            <div class="code-scroll" role="region" aria-label="API docs source code" tabindex="0"><pre><code>// Program.cs: XML comments feed the Swagger UI and the published OpenAPI spec.
+builder.Services.AddSwaggerGen(options =&gt;
+{
+    options.SwaggerDoc(&quot;v1&quot;, new OpenApiInfo { Title = &quot;CareBridge API&quot;, Version = &quot;v1&quot; });
+    options.IncludeXmlComments(
+        Path.Combine(AppContext.BaseDirectory, $&quot;{typeof(Program).Assembly.GetName().Name}.xml&quot;));
+});
+
+// Controllers/Api/AuthorizationsController.cs
+[ApiController]
+[Route(&quot;api/v1/cases&quot;)]
+[Produces(&quot;application/json&quot;)]
+public sealed class AuthorizationsController(ICaseService cases) : ControllerBase
+{
+    /// &lt;summary&gt;Records an approve or deny decision on a pending service authorization.&lt;/summary&gt;
+    /// &lt;param name=&quot;caseId&quot;&gt;Case record ID.&lt;/param&gt;
+    /// &lt;param name=&quot;authorizationId&quot;&gt;Service authorization ID on that case.&lt;/param&gt;
+    /// &lt;param name=&quot;request&quot;&gt;The decision, plus a plain-language reason when denying.&lt;/param&gt;
+    /// &lt;param name=&quot;ct&quot;&gt;Request cancellation.&lt;/param&gt;
+    /// &lt;response code=&quot;200&quot;&gt;Decision recorded; returns the updated authorization.&lt;/response&gt;
+    /// &lt;response code=&quot;400&quot;&gt;Validation failed, for example a denial without a reason.&lt;/response&gt;
+    /// &lt;response code=&quot;404&quot;&gt;No such authorization on this case.&lt;/response&gt;
+    /// &lt;response code=&quot;409&quot;&gt;Another reviewer already decided this authorization.&lt;/response&gt;
+    [HttpPost(&quot;{caseId:int}/authorizations/{authorizationId:int}/decision&quot;)]
+    [Authorize(Policy = &quot;CanDecideAuthorizations&quot;)]
+    [ProducesResponseType&lt;ServiceAuthorizationDto&gt;(StatusCodes.Status200OK)]
+    [ProducesResponseType&lt;ValidationProblemDetails&gt;(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesResponseType&lt;ProblemDetails&gt;(StatusCodes.Status409Conflict)]
+    public async Task&lt;IActionResult&gt; Decide(
+        int caseId, int authorizationId, AuthorizationDecisionRequest request, CancellationToken ct)
+    {
+        var outcome = await cases.DecideAuthorizationAsync(caseId, authorizationId, request, ct);
+
+        return outcome.Kind switch
+        {
+            DecisionResultKind.Success =&gt; Ok(outcome.Authorization),
+            DecisionResultKind.NotFound =&gt; NotFound(),
+            DecisionResultKind.AlreadyDecided =&gt; Problem(
+                statusCode: StatusCodes.Status409Conflict,
+                title: &quot;Authorization already decided&quot;),
+            _ =&gt; throw new UnreachableException()
+        };
+    }
+}</code></pre></div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="fit" aria-labelledby="fit-heading">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Role fit</p>
+        <h2 id="fit-heading">The role's duties, matched to work I have done</h2>
+        <p>Each group follows the five sections of the position summary, with examples from my resume.</p>
+      </div>
+      <div class="weights">
+        <div class="weight">
+          <div><p class="duty-tag">1 &#183; Understanding and planning</p><h3>Requirement analysis, design and code review</h3></div>
+          <ul><li>Ran requirements sessions with NYC DSS program teams and turned Medicaid and Medicare policy into workflows for intake, assessment, review and service authorization.</li><li>Gathered requirements from Karnataka government stakeholders and absorbed urgent scope changes from state directives under tight deadlines.</li><li>Defined API contracts and service boundaries at Euromonitor; did feasibility analysis with clients and code reviews in every sprint at Blackwater Tech.</li></ul>
+        </div>
+        <div class="weight">
+          <div><p class="duty-tag">2 &#183; Development and implementation</p><h3>Features in C#, front ends, Web APIs and database scripts</h3></div>
+          <ul><li>Business logic and reusable components in C#, LINQ and Entity Framework, plus reusable Angular and React components, hooks and dynamic forms.</li><li>Front ends built to design guidelines: Bootstrap and Angular Material layouts, an SCSS design system, and WCAG 2.1 AA accessibility.</li><li>ASP.NET Core Web APIs and .NET 6/8 microservices, including legacy upgrades that kept backward compatibility.</li><li>SQL Server schemas, stored procedures, views and reporting queries for high-volume transactional and reporting work.</li></ul>
+        </div>
+        <div class="weight">
+          <div><p class="duty-tag">3 &#183; Quality assurance and optimization</p><h3>Unit tests, debugging and performance</h3></div>
+          <ul><li>Unit tests with xUnit, NUnit and Karma; API checks with Swagger and Postman before government releases; SonarQube quality gates.</li><li>Production support: monitoring with Application Insights, Grafana and Serilog, incident diagnosis and root cause analysis.</li><li>Performance: SQL query tuning and indexing for large analytical queries, Redis caching and rate limiting, lazy loading and code splitting in the UI.</li></ul>
+        </div>
+        <div class="weight">
+          <div><p class="duty-tag">4 &#183; Mentorship and knowledge sharing</p><h3>Code reviews, standards and technical documentation</h3></div>
+          <ul><li>Code reviews and shared engineering standards: SOLID, layered architecture, API versioning, and reusable component libraries other developers build on.</li><li>Technical documentation: API specifications through Swagger/OpenAPI and XML comments, design notes, and the accessibility guide and test script in the CareBridge repository.</li><li>Ad-hoc reports and data sheets that let senior officials and ministers answer questions in the legislative assembly.</li></ul>
+        </div>
+        <div class="weight">
+          <div><p class="duty-tag">5 &#183; Communication and collaboration</p><h3>Clear communication, independent ownership</h3></div>
+          <ul><li>Work daily with business analysts, QA, product, UX, vendors and program managers in Agile/Scrum teams.</li><li>Took sole ownership of backend services, CI/CD release pipelines and production readiness at Euromonitor.</li><li>Coordinated with the NIC data center and several state departments to get access to beneficiary data and APIs.</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" aria-labelledby="skills-heading">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Technical skills</p>
+        <h2 id="skills-heading">Tools and technologies</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card"><h3>Backend (.NET)</h3><ul class="chips"><li>C#</li><li>.NET Framework</li><li>.NET Core / .NET 6 and 8</li><li>ASP.NET Core MVC</li><li>Web API</li><li>RESTful APIs</li><li>Middleware</li><li>Blazor</li><li>Python</li><li>RabbitMQ</li><li>Kafka</li></ul></div>
+        <div class="skill-card"><h3>Frontend (UI)</h3><ul class="chips"><li>JavaScript</li><li>jQuery</li><li>TypeScript</li><li>HTML5</li><li>CSS3</li><li>SCSS</li><li>Bootstrap</li><li>Angular Material</li><li>Angular (v12+)</li><li>React</li><li>responsive and component-based UI</li><li>WCAG 2.1 AA</li></ul></div>
+        <div class="skill-card"><h3>Database and data access</h3><ul class="chips"><li>SQL Server</li><li>stored procedures</li><li>performance tuning</li><li>Entity Framework / EF Core</li><li>LINQ</li><li>Dapper</li><li>ADO.NET</li><li>SSIS</li><li>Azure SQL</li><li>Cosmos DB</li><li>Redis</li></ul></div>
+        <div class="skill-card"><h3>Architecture</h3><ul class="chips"><li>SOLID principles</li><li>design patterns</li><li>MVC and MVVM</li><li>microservices</li><li>micro-frontends</li><li>API versioning</li></ul></div>
+        <div class="skill-card"><h3>Testing and quality</h3><ul class="chips"><li>xUnit</li><li>NUnit</li><li>Karma</li><li>Playwright</li><li>Swagger</li><li>Postman</li><li>SonarQube</li><li>SonarCloud</li><li>axe-core</li></ul></div>
+        <div class="skill-card"><h3>Azure cloud</h3><ul class="chips"><li>App Services</li><li>Functions</li><li>Storage</li><li>Key Vault</li><li>Azure AD (OAuth 2.0 / OIDC)</li><li>Managed Identities</li><li>Kubernetes</li></ul></div>
+        <div class="skill-card"><h3>DevOps and source control</h3><ul class="chips"><li>Git</li><li>Azure DevOps</li><li>GitHub Actions</li><li>TFS</li><li>CI/CD pipelines</li><li>Docker</li><li>environment-based deployments</li></ul></div>
+        <div class="skill-card"><h3>Monitoring</h3><ul class="chips"><li>Azure Application Insights</li><li>Grafana</li><li>Serilog</li><li>distributed tracing</li><li>health checks</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" aria-labelledby="exp-heading">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Experience</p>
+        <h2 id="exp-heading">Recent roles</h2>
+      </div>
+      <ol class="timeline" reversed>
+        <li class="role">
+          <h3>Senior Consultant &#183; Department of Social Services, New York City</h3>
+          <p class="when">Dec 2025 &#8211; present</p>
+          <ul>
+            <li>Long-Term Care platform supporting Medicaid and Medicare service programs: enrollment, eligibility, case management and service authorization.</li>
+            <li>Accessible React and Angular interfaces, with WCAG 2.1 AA remediation verified by automated checks and keyboard testing.</li>
+            <li>.NET 6/8 microservices, Azure AD role-based access, Kafka/RabbitMQ events, SQL Server reporting, Azure DevOps CI/CD.</li>
+            <li>Multi-level review, approval and reassessment workflows, audit logging and compliance controls for government data governance.</li>
+            <li>SQL Server stored procedures and views, SSIS packages and SQL Server Agent jobs, and Cosmos DB for assessment and audit data.</li>
+            <li>Production monitoring, incident investigation and root cause analysis; requirements sessions with DSS program teams.</li>
+          </ul>
+        </li>
+        <li class="role">
+          <h3>Software Engineer &#183; Euromonitor International</h3>
+          <p class="when">Dec 2021 &#8211; Nov 2025</p>
+          <ul>
+            <li>Modernized ASP.NET Core services to .NET 6/8 and built Angular and React micro-UIs for enterprise analytics dashboards.</li>
+            <li>Tested with axe DevTools and JAWS, and remediated keyboard, focus-management and screen-reader issues to WCAG 2.1 AA.</li>
+            <li>SQL Server query tuning, indexing and efficient ORM use for large analytical queries; Cosmos DB and Redis where they fit.</li>
+            <li>Owned API contracts, OAuth 2.0 / OIDC sign-in with Azure AD, and the Azure DevOps CI/CD release pipelines across services.</li>
+          </ul>
+        </li>
+        <li class="role">
+          <h3>.NET Developer &#183; Karnataka State Agricultural Department</h3>
+          <p class="when">Apr 2021 &#8211; Nov 2021</p>
+          <ul>
+            <li>Statewide schemes application using .NET Core, React and SQL Server, including beneficiary eligibility filtering across department APIs.</li>
+            <li>ASP.NET Core MVC and Web API modules for irrigation, pesticides, fertilizers and farm mechanization, with Entity Framework and tuned stored procedures.</li>
+            <li>Unit tests with xUnit and Karma, API validation with Swagger and Postman, and Azure DevOps pipelines with strict release approvals.</li>
+            <li>Maintained WPF desktop apps (C#, XAML, MVVM) and prepared real-time scheme reports for senior officials and ministers.</li>
+          </ul>
+        </li>
+        <li class="role">
+          <h3>Software Developer &#183; Blackwater Tech</h3>
+          <p class="when">May 2018 &#8211; Apr 2021</p>
+          <ul>
+            <li>ASP.NET MVC and Core applications with Angular Material and Bootstrap front ends.</li>
+            <li>Business logic in C#, LINQ and Entity Framework over SQL Server; RESTful APIs for front ends and client systems.</li>
+            <li>Built an Employee Management System later adopted as the internal HR platform, and integrated Stripe payments.</li>
+            <li>Sprint planning, code reviews and releases in Agile Scrum; Azure DevOps CI/CD automation.</li>
+          </ul>
+        </li>
+      </ol>
+      <h3>Certifications and education</h3>
+      <ul class="chips" aria-label="Certifications and education">
+        <li>Microsoft Azure Developer (AZ-204)</li>
+        <li>Microsoft Azure Fundamentals (AZ-900)</li>
+        <li>B.E., Anna University (Panimalar Engineering College)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="resume" aria-labelledby="resume-heading">
+    <div class="wrap">
+      <div class="resume-box">
+        <div>
+          <p class="kicker">Resume</p>
+          <h2 id="resume-heading">Download my resume</h2>
+          <p>The same resume I shared with the recruiter, as a Word document or a PDF.</p>
+          <p class="dl-status" id="dl-status" role="status"></p>
+        </div>
+        <div class="actions">
+          <a class="btn" href="files/Charan-Reddy-Resume.pdf" download>Download PDF</a>
+          <a class="btn ghost" href="files/Charan-Reddy-Resume.docx" download>Download Word (.docx)</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>CareBridge is an independent demonstration project. It contains no client or agency code, and all names, case numbers and IDs are fictional. The live demo uses an in-browser copy of the API's sample data and rules.</p>
+    <p>This page is set in Atkinson Hyperlegible, a typeface the Braille Institute designed for readers with low vision.</p>
+  </div>
+</footer>
+
+<script>
+  // The publishing step supplies the <html> wrapper; make sure the page language is declared (WCAG 3.1.1).
+  document.documentElement.lang = "en";
+
+  // Contrast swatches: colors are set from data attributes (keeps markup free of inline styles).
+  document.querySelectorAll(".swatch").forEach((s) => { s.style.color = s.dataset.fg; s.style.background = s.dataset.bg; });
+  document.querySelectorAll(".bar .w40").forEach((b) => { b.style.width = "40%"; });
+  document.querySelectorAll(".bar .w10").forEach((b) => { b.style.width = "10%"; });
+
+  // Copy email: clipboard may be refused in some viewers, so fall back to selecting the text.
+  document.querySelectorAll("[data-copy]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const target = document.getElementById(btn.dataset.copy);
+      const done = () => { btn.textContent = "Copied"; setTimeout(() => { btn.textContent = "Copy"; }, 2000); };
+      const select = () => { const r = document.createRange(); r.selectNodeContents(target); const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); btn.textContent = "Selected"; };
+      try { navigator.clipboard.writeText(target.textContent).then(done, select); } catch { select(); }
+    });
+  });
+
+  // Code sample tabs: WAI-ARIA tabs pattern (same behavior as the project's tabs.js), one group per viewer.
+  document.querySelectorAll(".code-tabs").forEach((list) => {
+    const tabs = [...list.querySelectorAll('[role="tab"]')];
+    function selectTab(i, focus) {
+      tabs.forEach((t, j) => {
+        const on = i === j;
+        t.setAttribute("aria-selected", String(on));
+        t.tabIndex = on ? 0 : -1;
+        document.getElementById(t.getAttribute("aria-controls")).hidden = !on;
+      });
+      if (focus) tabs[i].focus();
+    }
+    tabs.forEach((t, i) => {
+      t.addEventListener("click", () => selectTab(i, true));
+      t.addEventListener("keydown", (e) => {
+        const map = { ArrowRight: (i + 1) % tabs.length, ArrowLeft: (i - 1 + tabs.length) % tabs.length, Home: 0, End: tabs.length - 1 };
+        if (e.key in map) { e.preventDefault(); selectTab(map[e.key], true); }
+      });
+    });
+  });
+
+</script>
+
+</body></html>
